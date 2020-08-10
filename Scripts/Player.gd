@@ -3,7 +3,6 @@ extends Spatial
 export (float) var move_speed = 5
 export (float) var mouse_sensitivity = 0.05
 export (float) var camera_angle = 0
-export (float) var aim_speed = 2.4
 export (NodePath) var club_path
 
 var ACCEL = 8
@@ -52,17 +51,6 @@ func handle_movement(delta):
 func _process(delta):
     if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
         return handle_movement(delta)
-        
-    var modifier = 1
-    
-    if Input.is_action_pressed("steady_aim"):
-        modifier = 0.3
-        
-    if Input.is_action_pressed("move_left"):
-        club.rotate_y((aim_speed * delta) * modifier)
-        
-    if Input.is_action_pressed("move_right"):
-        club.rotate_y(((aim_speed * delta) * -1) * modifier)
     
 func cycle_zoom_level():
     if zoom_level == 3:
