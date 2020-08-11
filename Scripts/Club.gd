@@ -13,14 +13,16 @@ var ball : RigidBody
 var input_disabled : bool = false
 
 func reset_position():
-    self.transform.origin = ball.global_transform.origin
     var offset = Vector3(0.15, 1.93, -0.1)
-    mesh.transform.origin = offset
-    # aim_cast.transform.origin = to_local(ball.global_transform.origin)
-    visible = true
-    draw_aim_assist()
-    animation_player.play("Reset")
     
+    transform.origin = ball.global_transform.origin
+    mesh.transform.origin = offset
+    aim_cast.global_transform.origin = ball.global_transform.origin
+    visible = true
+    
+    animation_player.play("Reset")
+    draw_aim_assist()
+
 func draw_aim_assist():
     var collision_point = aim_cast.get_collision_point()
 
