@@ -16,15 +16,18 @@ func reset_position():
     self.transform.origin = ball.global_transform.origin
     var offset = Vector3(0.15, 1.93, -0.1)
     mesh.transform.origin = offset
+    # aim_cast.transform.origin = to_local(ball.global_transform.origin)
     visible = true
     draw_aim_assist()
     animation_player.play("Reset")
     
 func draw_aim_assist():
+    var collision_point = aim_cast.get_collision_point()
+
     aim_line.clear()
     aim_line.begin(Mesh.PRIMITIVE_LINE_STRIP)
     aim_line.add_vertex(to_local(ball.global_transform.origin))
-    aim_line.add_vertex(to_local(aim_cast.get_collision_point()))
+    aim_line.add_vertex(to_local(collision_point))
     aim_line.end()
 
 func _ready():
@@ -36,6 +39,7 @@ func _input(event):
         return
 
     if Input.is_action_just_pressed("action"):
+        input_disabled = true
         animation_player.play("Slow_Swing")
         
 func _process(delta):
@@ -57,13 +61,12 @@ func _process(delta):
             rotate_y(((aim_speed * delta) * -1) * modifier)
             aim_altered = true
 
-    if aim_altered:
-        draw_aim_assist()
+    draw_aim_assist()
 
 func hit_ball():
     aim_line.clear()
-    input_disabled = true
     ball.sleeping = false
+
     var impulse = global_transform.basis.x * 5 * -1
     ball.apply_central_impulse(impulse)
 

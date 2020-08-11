@@ -294,7 +294,7 @@ anims/Slow_Swing = SubResource( 2 )
 [node name="Mesh" type="Spatial" parent="."]
 
 [node name="RayCast" type="RayCast" parent="Mesh"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.93762, 0.106772 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.172, -1.934, 0.098 )
 enabled = true
 cast_to = Vector3( -10, 0, 0 )
 
