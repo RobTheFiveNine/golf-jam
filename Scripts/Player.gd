@@ -49,18 +49,6 @@ func handle_movement(delta):
     transform.origin += velocity
 
 func _process(delta):
-    if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-        return handle_movement(delta)
-    
-func cycle_zoom_level():
-    if zoom_level == 3:
-        zoom_level = 1
-    else:
-        zoom_level += 1
-
-    camera.fov = default_fov / zoom_level
-
-func _input(event):
     if Input.is_action_just_pressed("ui_end"):
         get_tree().quit()
         
@@ -74,7 +62,19 @@ func _input(event):
         else:
             Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
             get_node("../CanvasLayer/CameraModeLabel").text = "Camera: Free View"
-        
+
+    if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+        return handle_movement(delta)
+    
+func cycle_zoom_level():
+    if zoom_level == 3:
+        zoom_level = 1
+    else:
+        zoom_level += 1
+
+    camera.fov = default_fov / zoom_level
+
+func _input(event):        
     if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
         rotation_helper.rotate_x(deg2rad(event.relative.y * mouse_sensitivity * -1))
         camera_container.rotate_y(deg2rad(event.relative.x * mouse_sensitivity * -1))
