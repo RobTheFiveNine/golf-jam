@@ -3,14 +3,12 @@ extends Spatial
 export (float) var move_speed = 5
 export (float) var mouse_sensitivity = 0.05
 export (float) var camera_angle = 0
-export (NodePath) var club_path
+export (float) var acceleration = 8
+export (float) var deceleration = 16
 
-var ACCEL = 8
-var DEACCEL = 16
 var velocity = Vector3()
 var default_fov = 0
 var zoom_level = 1
-var club : Spatial
 
 onready var camera_container = $Camera_Container
 onready var rotation_helper = $Camera_Container/Rotation_Helper
@@ -19,7 +17,6 @@ onready var camera = $Camera_Container/Rotation_Helper/Camera
 func _ready():
     Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
     default_fov = camera.fov
-    club = get_node(club_path)
     
 func handle_movement(delta):
     var aim = camera.get_global_transform().basis
@@ -39,13 +36,12 @@ func handle_movement(delta):
     var target = direction * move_speed * delta
     
     if direction == Vector3.ZERO:
-        velocity = velocity.linear_interpolate(target, DEACCEL * delta)
+        velocity = velocity.linear_interpolate(target, deceleration * delta)
     else:
-        velocity = velocity.linear_interpolate(target, ACCEL * delta)
+        velocity = velocity.linear_interpolate(target, acceleration * delta)
         
     # Prevent player moving up and down through the plane they start on
     velocity.y = 0
-    
     transform.origin += velocity
 
 func _process(delta):
