@@ -298,7 +298,7 @@ enabled = true
 cast_to = Vector3( -10, 0, 0 )
 
 [node name="club_blue" parent="Mesh" instance=ExtResource( 1 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.401504, 0 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.76801, 0 )
 
 [node name="club_blue" parent="Mesh/club_blue/tmpParent" index="0"]
 material/0 = ExtResource( 3 )

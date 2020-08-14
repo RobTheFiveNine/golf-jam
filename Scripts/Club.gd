@@ -13,7 +13,7 @@ var ball : RigidBody
 var input_disabled : bool = false
 
 func reset_position():
-    var offset = Vector3(0.15, 1.93, -0.1)
+    var offset = Vector3(0.15, 2.3, -0.1)
     
     transform.origin = ball.global_transform.origin
     mesh.transform.origin = offset
