@@ -11,6 +11,7 @@ onready var aim_line = $ImmediateGeometry
 
 var ball : RigidBody
 var input_disabled : bool = false
+var ball_in_hole : bool = false
 
 func reset_position():
     var offset = Vector3(0.15, 2.3, -0.1)
@@ -73,5 +74,12 @@ func hit_ball():
     ball.apply_central_impulse(impulse)
 
 func _on_ball_stopped():
-    input_disabled = false
-    reset_position()
+    if not ball_in_hole:
+        input_disabled = false
+        reset_position()
+    
+func _on_ball_entered_hole():
+    ball_in_hole = true
+    
+func _on_ball_exited_hole():
+    ball_in_hole = false

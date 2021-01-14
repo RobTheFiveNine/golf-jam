@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Spatial",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Scripts/Player.gd"
+} ]
 _global_script_class_icons={
-
+"Player": ""
 }
 
 [application]
@@ -75,7 +80,7 @@ steady_aim={
 
 [rendering]
 
-quality/directional_shadow/size=6144
+quality/directional_shadow/size=8192
 quality/shadows/filter_mode=2
 quality/filters/msaa=1
 environment/default_environment="res://default_env.tres"
