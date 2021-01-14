@@ -6,6 +6,7 @@
 [ext_resource path="res://Prefabs/Tiles/EndWalls.tscn" type="PackedScene" id=5]
 
 [node name="LevelBase" instance=ExtResource( 3 )]
+level_number = 1
 
 [node name="DirectionalLight" parent="." index="1"]
 transform = Transform( 0.704931, -0.454328, 0.544664, 0, 0.767915, 0.640552, -0.709276, -0.451545, 0.541327, 7.72486, 14.1809, 3.77031 )

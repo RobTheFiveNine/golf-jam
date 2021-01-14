@@ -12,6 +12,7 @@ onready var aim_line = $ImmediateGeometry
 var ball : RigidBody
 var input_disabled : bool = false
 var ball_in_hole : bool = false
+var input_mode : int
 
 func reset_position():
     var offset = Vector3(0.15, 2.3, -0.1)
@@ -52,7 +53,7 @@ func _process(delta):
     if input_disabled:
         return
     
-    if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
+    if input_mode == Player.INPUT_MODE_AIM:
         if Input.is_action_pressed("steady_aim"):
             modifier = 0.3
             
@@ -83,3 +84,6 @@ func _on_ball_entered_hole():
     
 func _on_ball_exited_hole():
     ball_in_hole = false
+    
+func _on_input_mode_changed(mode):
+    input_mode = mode

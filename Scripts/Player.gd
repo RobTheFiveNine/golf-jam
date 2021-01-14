@@ -1,5 +1,12 @@
 extends Spatial
 
+class_name Player
+
+signal input_mode_changed(mode)
+
+const INPUT_MODE_FREE_VIEW = 0
+const INPUT_MODE_AIM = 1
+
 export (float) var move_speed = 5
 export (float) var mouse_sensitivity = 0.05
 export (float) var camera_angle = 0
@@ -9,6 +16,7 @@ export (float) var deceleration = 16
 var velocity = Vector3()
 var default_fov = 0
 var zoom_level = 1
+var input_mode = INPUT_MODE_FREE_VIEW
 
 onready var camera_container = $Camera_Container
 onready var rotation_helper = $Camera_Container/Rotation_Helper
@@ -52,14 +60,14 @@ func _process(delta):
         cycle_zoom_level()
 
     if Input.is_action_just_pressed("ui_cancel"):
-        if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-            Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-            get_node("../CanvasLayer/CameraModeLabel").text = "Camera: Aim"
+        if input_mode == INPUT_MODE_FREE_VIEW:
+            input_mode = INPUT_MODE_AIM
         else:
-            Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-            get_node("../CanvasLayer/CameraModeLabel").text = "Camera: Free View"
+            input_mode = INPUT_MODE_FREE_VIEW
+            
+        emit_signal("input_mode_changed", input_mode)
 
-    if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+    if input_mode == INPUT_MODE_FREE_VIEW:
         return handle_movement(delta)
     
 func cycle_zoom_level():
@@ -71,7 +79,7 @@ func cycle_zoom_level():
     camera.fov = default_fov / zoom_level
 
 func _input(event):        
-    if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+    if event is InputEventMouseMotion and input_mode == INPUT_MODE_FREE_VIEW:
         rotation_helper.rotate_x(deg2rad(event.relative.y * mouse_sensitivity * -1))
         camera_container.rotate_y(deg2rad(event.relative.x * mouse_sensitivity * -1))
 
