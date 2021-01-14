@@ -8,21 +8,13 @@
 [node name="LevelBase" instance=ExtResource( 3 )]
 level_number = 1
 
-[node name="DirectionalLight" parent="." index="1"]
-transform = Transform( 0.704931, -0.454328, 0.544664, 0, 0.767915, 0.640552, -0.709276, -0.451545, 0.541327, 7.72486, 14.1809, 3.77031 )
-light_energy = 2.65
-light_specular = 0.2
-shadow_bias = 0.0
-directional_shadow_split_2 = 0.046
-directional_shadow_normal_bias = 0.05
-
 [node name="Camera" parent="Player/Camera_Container/Rotation_Helper" index="0"]
 transform = Transform( 1, -8.9407e-08, 5.96046e-08, 2.98023e-08, 1, 2.08616e-07, 0, 1.49012e-08, 1, 0, 0, 0 )
 
-[node name="Club" parent="." index="4"]
+[node name="Club" parent="." index="3"]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.131209, 2.47574, -7.34507 )
 
-[node name="Ball" parent="." index="5"]
+[node name="Ball" parent="." index="4"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0173099, 0.1979, -7.0222 )
 
 [node name="Course" type="Spatial" parent="." index="6"]
@@ -40,9 +32,17 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.002, 0, -11 )
 [node name="HoleSquare" parent="Course" index="3" instance=ExtResource( 1 )]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -1.99988, -2.38419e-07, -5.20633 )
 
-[node name="DirectionalLight2" type="DirectionalLight" parent="." index="7"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.949443, 0 )
-visible = false
+[node name="DirectionalLight3" type="DirectionalLight" parent="." index="7"]
+transform = Transform( 0.704931, -0.454328, 0.544663, 0, 0.767915, 0.640552, -0.709276, -0.451545, 0.541327, 7.725, 14.181, 3.77 )
+light_color = Color( 0.913725, 0.972549, 0.811765, 1 )
+light_energy = 2.65
+light_specular = 0.24
+shadow_enabled = true
+shadow_bias = 0.0
+directional_shadow_mode = 0
+directional_shadow_normal_bias = 0.05
+directional_shadow_depth_range = 1
+directional_shadow_max_distance = 35.0
 [connection signal="ball_entered_hole" from="Course/HoleSquare" to="." method="_on_ball_entered_hole"]
 [connection signal="ball_exited_hole" from="Course/HoleSquare" to="." method="_on_ball_exited_hole"]
 [connection signal="level_finished" from="Course/HoleSquare" to="." method="_on_level_finished"]
