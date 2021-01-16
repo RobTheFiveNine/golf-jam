@@ -59,7 +59,7 @@ func _process(delta):
     if Input.is_action_just_pressed("cycle_zoom"):
         cycle_zoom_level()
 
-    if Input.is_action_just_pressed("ui_cancel"):
+    if Input.is_action_just_pressed("toggle_input_mode"):
         if input_mode == INPUT_MODE_FREE_VIEW:
             input_mode = INPUT_MODE_AIM
         else:
