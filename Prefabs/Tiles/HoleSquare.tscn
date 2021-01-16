@@ -33,6 +33,7 @@ one_shot = true
 
 [node name="holeSquare" parent="tmpParent" index="0"]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+use_in_baked_light = true
 [connection signal="body_entered" from="HoleArea" to="." method="_on_HoleArea_body_entered"]
 [connection signal="body_exited" from="HoleArea" to="." method="_on_HoleArea_body_exited"]
 [connection signal="timeout" from="FinishTimer" to="." method="_on_FinishTimer_timeout"]

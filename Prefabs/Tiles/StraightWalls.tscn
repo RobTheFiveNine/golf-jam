@@ -34,3 +34,4 @@ __meta__ = {
 
 [node name="straight" parent="tmpParent" index="0"]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+use_in_baked_light = true
