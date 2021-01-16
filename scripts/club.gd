@@ -55,7 +55,7 @@ func _process(delta):
     
     if input_mode == Player.INPUT_MODE_AIM:
         if Input.is_action_pressed("steady_aim"):
-            modifier = 0.3
+            modifier = 0.15
             
         if Input.is_action_pressed("move_left"):
             rotate_y((aim_speed * delta) * modifier)
