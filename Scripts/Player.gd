@@ -78,7 +78,9 @@ func cycle_zoom_level():
 
     camera.fov = default_fov / zoom_level
 
-func _input(event):        
+func _input(event):
+    Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
     if event is InputEventMouseMotion and input_mode == INPUT_MODE_FREE_VIEW:
         rotation_helper.rotate_x(deg2rad(event.relative.y * mouse_sensitivity * -1))
         camera_container.rotate_y(deg2rad(event.relative.x * mouse_sensitivity * -1))
