@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "Player",
 "language": "GDScript",
 "path": "res://scripts/player.gd"
+}, {
+"base": "Node",
+"class": "TutorialStep",
+"language": "GDScript",
+"path": "res://ui/input_tutorial/scripts/tutorial_step.gd"
 } ]
 _global_script_class_icons={
-"Player": ""
+"Player": "",
+"TutorialStep": ""
 }
 
 [application]

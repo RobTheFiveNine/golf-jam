@@ -1,0 +1,242 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://ui/input_tutorial/scripts/step_1.gd" type="Script" id=1]
+[ext_resource path="res://fonts/kenney_pixel.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://ui/input_tutorial/scripts/input_tutorial.gd" type="Script" id=3]
+[ext_resource path="res://ui/input_tutorial/scripts/step_2.gd" type="Script" id=4]
+[ext_resource path="res://ui/input_tutorial/scripts/step_3.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 118
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 80
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "CompleteStep1"
+length = 2.0
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("Step_1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Step_2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.75, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Step_1")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "complete"
+} ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("Step_2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1.25 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "begin"
+} ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "CompleteStep2"
+length = 2.0
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("Step_2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.75 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("Step_2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.75 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "complete"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Step_3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1, 1.75 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("Step_3")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "begin"
+} ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "CompleteStep3"
+length = 2.0
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("Step_3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("Step_3")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "complete"
+} ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Start"
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("Step_1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.75 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="TutorialOverlay" type="MarginContainer"]
+anchor_top = 0.7
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Step_1" type="RichTextLabel" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 117.0
+margin_right = 1920.0
+margin_bottom = 207.0
+size_flags_vertical = 4
+custom_fonts/bold_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]Use the [b][color=yellow]W[/color][/b], [b][color=yellow]A[/color][/b], [b][color=yellow]S[/color][/b] and [b][color=yellow]D[/color][/b] keys to move in free view mode[/center]"
+text = "Use the W, A, S and D keys to move in free view mode"
+fit_content_height = true
+script = ExtResource( 1 )
+active_step = true
+step_number = 1
+
+[node name="Step_2" type="RichTextLabel" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 117.0
+margin_right = 1920.0
+margin_bottom = 207.0
+size_flags_vertical = 4
+custom_fonts/bold_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]Press the [b][color=yellow]TAB[/color][/b] key to enter aim mode[/center]"
+text = "Press the TAB key to enter aim mode"
+fit_content_height = true
+script = ExtResource( 4 )
+step_number = 2
+
+[node name="Step_3" type="RichTextLabel" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 72.0
+margin_right = 1920.0
+margin_bottom = 252.0
+size_flags_vertical = 4
+custom_fonts/bold_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]Use the [b][color=yellow]A[/color][/b] and [b][color=yellow]D[/color][/b] keys to aim.
+Hold [b][color=yellow]SHIFT[/color][/b] to aim more precisely[/center]"
+text = "Use the A and D keys to aim.
+Hold SHIFT to aim more precisely"
+fit_content_height = true
+script = ExtResource( 5 )
+step_number = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/CompleteStep1 = SubResource( 3 )
+anims/CompleteStep2 = SubResource( 4 )
+anims/CompleteStep3 = SubResource( 5 )
+anims/Start = SubResource( 6 )
+[connection signal="criteria_met" from="Step_1" to="." method="_on_criteria_met"]
+[connection signal="criteria_met" from="Step_2" to="." method="_on_criteria_met"]
+[connection signal="criteria_met" from="Step_3" to="." method="_on_criteria_met"]
