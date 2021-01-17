@@ -8,14 +8,18 @@ onready var static_body = $StaticBody
 onready var mesh = $Mesh
 onready var aim_cast = $Mesh/RayCast
 onready var aim_line = $ImmediateGeometry
+onready var tween : Tween = $HitTween
+onready var power_meter : ProgressBar = $ProgressBar
 
 var ball : RigidBody
 var input_disabled : bool = false
 var ball_in_hole : bool = false
 var input_mode : int
+var swinging : bool = false
 
 func reset_position():
     var offset = Vector3(0.15, 2.3, -0.1)
+    power_meter.visible = false
     
     transform.origin = ball.global_transform.origin
     mesh.transform.origin = offset
@@ -43,14 +47,31 @@ func _input(event):
         return
 
     if Input.is_action_just_pressed("action"):
-        input_disabled = true
-        animation_player.play("Slow_Swing")
+        if not swinging:
+            swinging = true
+            animation_player.play("Swing")
+        else:
+            input_disabled = true
+            swinging = false
+            animation_player.stop()
+            var target = mesh.rotation_degrees
+            target.z = 0
+            tween.interpolate_property(
+                mesh,
+                "rotation_degrees",
+                mesh.rotation_degrees,
+                target,
+                0.5,
+                Tween.TRANS_SINE,
+                Tween.EASE_IN
+            )
+            tween.start()
         
 func _process(delta):
     var modifier = 1
     var aim_altered = false
     
-    if input_disabled:
+    if input_disabled or swinging:
         return
     
     if input_mode == Player.INPUT_MODE_AIM:
@@ -67,7 +88,7 @@ func _process(delta):
 
     draw_aim_assist()
 
-func hit_ball():
+func hit_ball():    
     aim_line.clear()
     ball.sleeping = false
 
@@ -87,3 +108,6 @@ func _on_ball_exited_hole():
     
 func _on_input_mode_changed(mode):
     input_mode = mode
+
+func _on_HitTween_tween_completed(object, key):
+    animation_player.play("Hit")
