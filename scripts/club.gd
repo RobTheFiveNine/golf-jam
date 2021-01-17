@@ -2,6 +2,7 @@ extends Spatial
 
 export (NodePath) var ball_path
 export (float) var aim_speed = 2.4
+export (float) var max_power = 10
 
 onready var animation_player = $AnimationPlayer
 onready var static_body = $StaticBody
@@ -92,7 +93,7 @@ func hit_ball():
     aim_line.clear()
     ball.sleeping = false
 
-    var impulse = global_transform.basis.x * 5 * -1
+    var impulse = global_transform.basis.x * (max_power * (power_meter.value / 100)) * -1
     ball.apply_central_impulse(impulse)
 
 func _on_ball_stopped():
