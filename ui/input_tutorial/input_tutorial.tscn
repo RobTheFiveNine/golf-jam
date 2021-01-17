@@ -1,18 +1,11 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://ui/input_tutorial/scripts/step_1.gd" type="Script" id=1]
-[ext_resource path="res://fonts/kenney_pixel.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://ui/input_tutorial/fonts/normal.tres" type="DynamicFont" id=2]
 [ext_resource path="res://ui/input_tutorial/scripts/input_tutorial.gd" type="Script" id=3]
 [ext_resource path="res://ui/input_tutorial/scripts/step_2.gd" type="Script" id=4]
 [ext_resource path="res://ui/input_tutorial/scripts/step_3.gd" type="Script" id=5]
-
-[sub_resource type="DynamicFont" id=1]
-size = 118
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 80
-font_data = ExtResource( 2 )
+[ext_resource path="res://ui/input_tutorial/fonts/bold.tres" type="DynamicFont" id=6]
 
 [sub_resource type="Animation" id=3]
 resource_name = "CompleteStep1"
@@ -176,38 +169,38 @@ tracks/0/keys = {
 }
 
 [node name="TutorialOverlay" type="MarginContainer"]
-anchor_top = 0.7
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_bottom = -120.0
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Step_1" type="RichTextLabel" parent="."]
-modulate = Color( 1, 1, 1, 0 )
-margin_top = 117.0
+margin_top = 883.0
 margin_right = 1920.0
-margin_bottom = 207.0
-size_flags_vertical = 4
-custom_fonts/bold_font = SubResource( 1 )
-custom_fonts/normal_font = SubResource( 2 )
+margin_bottom = 960.0
+size_flags_vertical = 8
+custom_fonts/bold_font = ExtResource( 6 )
+custom_fonts/normal_font = ExtResource( 2 )
 bbcode_enabled = true
 bbcode_text = "[center]Use the [b][color=yellow]W[/color][/b], [b][color=yellow]A[/color][/b], [b][color=yellow]S[/color][/b] and [b][color=yellow]D[/color][/b] keys to move in free view mode[/center]"
 text = "Use the W, A, S and D keys to move in free view mode"
 fit_content_height = true
+scroll_active = false
 script = ExtResource( 1 )
 active_step = true
 step_number = 1
 
 [node name="Step_2" type="RichTextLabel" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-margin_top = 117.0
+margin_top = 883.0
 margin_right = 1920.0
-margin_bottom = 207.0
-size_flags_vertical = 4
-custom_fonts/bold_font = SubResource( 1 )
-custom_fonts/normal_font = SubResource( 2 )
+margin_bottom = 960.0
+size_flags_vertical = 8
+custom_fonts/bold_font = ExtResource( 6 )
+custom_fonts/normal_font = ExtResource( 2 )
 bbcode_enabled = true
 bbcode_text = "[center]Press the [b][color=yellow]TAB[/color][/b] key to enter aim mode[/center]"
 text = "Press the TAB key to enter aim mode"
@@ -217,12 +210,12 @@ step_number = 2
 
 [node name="Step_3" type="RichTextLabel" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-margin_top = 72.0
+margin_top = 806.0
 margin_right = 1920.0
-margin_bottom = 252.0
-size_flags_vertical = 4
-custom_fonts/bold_font = SubResource( 1 )
-custom_fonts/normal_font = SubResource( 2 )
+margin_bottom = 960.0
+size_flags_vertical = 8
+custom_fonts/bold_font = ExtResource( 6 )
+custom_fonts/normal_font = ExtResource( 2 )
 bbcode_enabled = true
 bbcode_text = "[center]Use the [b][color=yellow]A[/color][/b] and [b][color=yellow]D[/color][/b] keys to aim.
 Hold [b][color=yellow]SHIFT[/color][/b] to aim more precisely[/center]"
