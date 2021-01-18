@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://ui/input_tutorial/scripts/step_1.gd" type="Script" id=1]
 [ext_resource path="res://ui/input_tutorial/fonts/normal.tres" type="DynamicFont" id=2]
@@ -6,167 +6,7 @@
 [ext_resource path="res://ui/input_tutorial/scripts/step_2.gd" type="Script" id=4]
 [ext_resource path="res://ui/input_tutorial/scripts/step_3.gd" type="Script" id=5]
 [ext_resource path="res://ui/input_tutorial/fonts/bold.tres" type="DynamicFont" id=6]
-
-[sub_resource type="Animation" id=3]
-resource_name = "CompleteStep1"
-length = 2.0
-step = 0.25
-tracks/0/type = "value"
-tracks/0/path = NodePath("Step_1:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Step_2:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.75, 1.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/2/type = "method"
-tracks/2/path = NodePath("Step_1")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "complete"
-} ]
-}
-tracks/3/type = "method"
-tracks/3/path = NodePath("Step_2")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 1.25 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "begin"
-} ]
-}
-
-[sub_resource type="Animation" id=4]
-resource_name = "CompleteStep2"
-length = 2.0
-step = 0.25
-tracks/0/type = "value"
-tracks/0/path = NodePath("Step_2:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.75 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath("Step_2")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.75 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "complete"
-} ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Step_3:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 1, 1.75 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/3/type = "method"
-tracks/3/path = NodePath("Step_3")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 1.5 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "begin"
-} ]
-}
-
-[sub_resource type="Animation" id=5]
-resource_name = "CompleteStep3"
-length = 2.0
-step = 0.25
-tracks/0/type = "value"
-tracks/0/path = NodePath("Step_3:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath("Step_3")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "complete"
-} ]
-}
-
-[sub_resource type="Animation" id=6]
-resource_name = "Start"
-step = 0.25
-tracks/0/type = "value"
-tracks/0/path = NodePath("Step_1:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.75 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
+[ext_resource path="res://ui/input_tutorial/scripts/step_4.gd" type="Script" id=7]
 
 [node name="TutorialOverlay" type="MarginContainer"]
 anchor_right = 1.0
@@ -176,8 +16,10 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+step_count = 4
 
 [node name="Step_1" type="RichTextLabel" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 margin_top = 883.0
 margin_right = 1920.0
 margin_bottom = 960.0
@@ -194,7 +36,7 @@ active_step = true
 step_number = 1
 
 [node name="Step_2" type="RichTextLabel" parent="."]
-modulate = Color( 1, 1, 1, 0 )
+visible = false
 margin_top = 883.0
 margin_right = 1920.0
 margin_bottom = 960.0
@@ -209,7 +51,7 @@ script = ExtResource( 4 )
 step_number = 2
 
 [node name="Step_3" type="RichTextLabel" parent="."]
-modulate = Color( 1, 1, 1, 0 )
+visible = false
 margin_top = 806.0
 margin_right = 1920.0
 margin_bottom = 960.0
@@ -225,11 +67,26 @@ fit_content_height = true
 script = ExtResource( 5 )
 step_number = 3
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/CompleteStep1 = SubResource( 3 )
-anims/CompleteStep2 = SubResource( 4 )
-anims/CompleteStep3 = SubResource( 5 )
-anims/Start = SubResource( 6 )
+[node name="Step_4" type="RichTextLabel" parent="."]
+margin_top = 883.0
+margin_right = 1920.0
+margin_bottom = 960.0
+size_flags_vertical = 8
+custom_fonts/bold_font = ExtResource( 6 )
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]Press the [b][color=yellow]SPACE BAR[/color][/b] to begin taking the shot[/center]"
+text = "Press the SPACE BAR to begin taking the shot"
+fit_content_height = true
+script = ExtResource( 7 )
+step_number = 4
+
+[node name="FadeOut" type="Tween" parent="."]
+
+[node name="FadeIn" type="Tween" parent="."]
 [connection signal="criteria_met" from="Step_1" to="." method="_on_criteria_met"]
 [connection signal="criteria_met" from="Step_2" to="." method="_on_criteria_met"]
 [connection signal="criteria_met" from="Step_3" to="." method="_on_criteria_met"]
+[connection signal="criteria_met" from="Step_4" to="." method="_on_criteria_met"]
+[connection signal="tween_completed" from="FadeOut" to="." method="_on_FadeOut_tween_completed"]
+[connection signal="tween_completed" from="FadeIn" to="." method="_on_FadeIn_tween_completed"]

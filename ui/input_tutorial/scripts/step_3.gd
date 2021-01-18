@@ -6,13 +6,13 @@ var slow_aimed : bool = false
 
 func _input(event):
     if active_step and not criteria_met:
-        if Input.is_action_pressed("steady_aim"):
+        if Input.is_action_just_pressed("steady_aim"):
             slow_aimed = true
             
-        if Input.is_action_pressed("move_left"):
+        if Input.is_action_just_pressed("move_left"):
             aimed = true
             
-        if Input.is_action_pressed("move_right"):
+        if Input.is_action_just_pressed("move_right"):
             aimed = true
             
         if slow_aimed and aimed:
