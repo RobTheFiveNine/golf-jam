@@ -16,13 +16,13 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-step_count = 4
+step_count = 5
 
 [node name="Step_1" type="RichTextLabel" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-margin_top = 883.0
-margin_right = 1920.0
-margin_bottom = 960.0
+margin_top = 523.0
+margin_right = 1280.0
+margin_bottom = 600.0
 size_flags_vertical = 8
 custom_fonts/bold_font = ExtResource( 6 )
 custom_fonts/normal_font = ExtResource( 2 )
@@ -37,9 +37,9 @@ step_number = 1
 
 [node name="Step_2" type="RichTextLabel" parent="."]
 visible = false
-margin_top = 883.0
-margin_right = 1920.0
-margin_bottom = 960.0
+margin_top = 523.0
+margin_right = 1280.0
+margin_bottom = 600.0
 size_flags_vertical = 8
 custom_fonts/bold_font = ExtResource( 6 )
 custom_fonts/normal_font = ExtResource( 2 )
@@ -52,9 +52,9 @@ step_number = 2
 
 [node name="Step_3" type="RichTextLabel" parent="."]
 visible = false
-margin_top = 806.0
-margin_right = 1920.0
-margin_bottom = 960.0
+margin_top = 446.0
+margin_right = 1280.0
+margin_bottom = 600.0
 size_flags_vertical = 8
 custom_fonts/bold_font = ExtResource( 6 )
 custom_fonts/normal_font = ExtResource( 2 )
@@ -68,9 +68,10 @@ script = ExtResource( 5 )
 step_number = 3
 
 [node name="Step_4" type="RichTextLabel" parent="."]
-margin_top = 883.0
-margin_right = 1920.0
-margin_bottom = 960.0
+visible = false
+margin_top = 523.0
+margin_right = 1280.0
+margin_bottom = 600.0
 size_flags_vertical = 8
 custom_fonts/bold_font = ExtResource( 6 )
 custom_fonts/normal_font = ExtResource( 2 )
@@ -81,6 +82,22 @@ fit_content_height = true
 script = ExtResource( 7 )
 step_number = 4
 
+[node name="Step_5" type="RichTextLabel" parent="."]
+margin_top = 472.0
+margin_right = 1280.0
+margin_bottom = 600.0
+size_flags_vertical = 8
+custom_fonts/bold_font = ExtResource( 6 )
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]Press the [b][color=yellow]SPACE BAR[/color][/b] to stop the
+power bar and take the shot.[/center]"
+text = "Press the SPACE BAR to stop the
+power bar and take the shot."
+fit_content_height = true
+script = ExtResource( 7 )
+step_number = 5
+
 [node name="FadeOut" type="Tween" parent="."]
 
 [node name="FadeIn" type="Tween" parent="."]
@@ -88,5 +105,6 @@ step_number = 4
 [connection signal="criteria_met" from="Step_2" to="." method="_on_criteria_met"]
 [connection signal="criteria_met" from="Step_3" to="." method="_on_criteria_met"]
 [connection signal="criteria_met" from="Step_4" to="." method="_on_criteria_met"]
+[connection signal="criteria_met" from="Step_5" to="." method="_on_criteria_met"]
 [connection signal="tween_completed" from="FadeOut" to="." method="_on_FadeOut_tween_completed"]
 [connection signal="tween_completed" from="FadeIn" to="." method="_on_FadeIn_tween_completed"]

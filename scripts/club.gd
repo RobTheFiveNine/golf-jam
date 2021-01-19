@@ -11,6 +11,7 @@ onready var aim_cast = $Mesh/RayCast
 onready var aim_line = $ImmediateGeometry
 onready var tween : Tween = $HitTween
 onready var power_meter : ProgressBar = $ProgressBar
+onready var power_label : Label = $PowerLabel
 
 var ball : RigidBody
 var input_disabled : bool = false
@@ -21,6 +22,7 @@ var swinging : bool = false
 func reset_position():
     var offset = Vector3(0.15, 2.3, -0.1)
     power_meter.visible = false
+    power_label.visible = false
     
     transform.origin = ball.global_transform.origin
     mesh.transform.origin = offset
@@ -40,6 +42,8 @@ func draw_aim_assist():
     aim_line.end()
 
 func _ready():
+    power_label.visible = false
+    power_meter.visible = false
     ball = get_node(ball_path).get_node("RigidBody")
     visible = false
 
