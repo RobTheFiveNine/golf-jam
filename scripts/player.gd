@@ -21,6 +21,7 @@ var input_mode = INPUT_MODE_FREE_VIEW
 onready var camera_container = $Camera_Container
 onready var rotation_helper = $Camera_Container/Rotation_Helper
 onready var camera = $Camera_Container/Rotation_Helper/Camera
+onready var zoom = $ZoomTween
 
 func _ready():
     Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -75,8 +76,17 @@ func cycle_zoom_level():
         zoom_level = 1
     else:
         zoom_level += 1
-
-    camera.fov = default_fov / zoom_level
+        
+    zoom.interpolate_property(
+        camera,
+        "fov",
+        null,
+        default_fov / zoom_level,
+        0.3,
+        Tween.TRANS_QUAD,
+        Tween.EASE_IN
+    )
+    zoom.start()
 
 func _input(event):
     Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
