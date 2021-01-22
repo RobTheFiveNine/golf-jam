@@ -19,10 +19,11 @@ __meta__ = {
 step_count = 5
 
 [node name="Step_1" type="RichTextLabel" parent="."]
+visible = false
 modulate = Color( 1, 1, 1, 0 )
-margin_top = 583.0
-margin_right = 1280.0
-margin_bottom = 630.0
+margin_top = 943.0
+margin_right = 1920.0
+margin_bottom = 990.0
 size_flags_vertical = 8
 custom_fonts/bold_font = ExtResource( 6 )
 custom_fonts/normal_font = ExtResource( 2 )
@@ -37,9 +38,9 @@ step_number = 1
 
 [node name="Step_2" type="RichTextLabel" parent="."]
 visible = false
-margin_top = 583.0
-margin_right = 1280.0
-margin_bottom = 630.0
+margin_top = 943.0
+margin_right = 1920.0
+margin_bottom = 990.0
 size_flags_vertical = 8
 custom_fonts/bold_font = ExtResource( 6 )
 custom_fonts/normal_font = ExtResource( 2 )
@@ -51,9 +52,10 @@ script = ExtResource( 4 )
 step_number = 2
 
 [node name="Step_3" type="RichTextLabel" parent="."]
-margin_top = 583.0
-margin_right = 1280.0
-margin_bottom = 630.0
+visible = false
+margin_top = 943.0
+margin_right = 1920.0
+margin_bottom = 990.0
 size_flags_vertical = 8
 custom_fonts/bold_font = ExtResource( 6 )
 custom_fonts/normal_font = ExtResource( 2 )
@@ -66,30 +68,30 @@ step_number = 3
 
 [node name="Step_4" type="RichTextLabel" parent="."]
 visible = false
-margin_top = 583.0
-margin_right = 1280.0
-margin_bottom = 630.0
+margin_top = 943.0
+margin_right = 1920.0
+margin_bottom = 990.0
 size_flags_vertical = 8
 custom_fonts/bold_font = ExtResource( 6 )
 custom_fonts/normal_font = ExtResource( 2 )
 bbcode_enabled = true
-bbcode_text = "[center]Press the [b][color=yellow]SPACE BAR[/color][/b] to begin taking the shot[/center]"
-text = "Press the SPACE BAR to begin taking the shot"
+bbcode_text = "[center]Press the [b][color=yellow]SPACE BAR[/color][/b] to show the power bar[/center]"
+text = "Press the SPACE BAR to show the power bar"
 fit_content_height = true
 script = ExtResource( 7 )
 step_number = 4
 
 [node name="Step_5" type="RichTextLabel" parent="."]
 visible = false
-margin_top = 583.0
-margin_right = 1280.0
-margin_bottom = 630.0
+margin_top = 943.0
+margin_right = 1920.0
+margin_bottom = 990.0
 size_flags_vertical = 8
 custom_fonts/bold_font = ExtResource( 6 )
 custom_fonts/normal_font = ExtResource( 2 )
 bbcode_enabled = true
-bbcode_text = "[center]Press the [b][color=yellow]SPACE BAR[/color][/b] to stop the power bar and take the shot.[/center]"
-text = "Press the SPACE BAR to stop the power bar and take the shot."
+bbcode_text = "[center]Press the [b][color=yellow]SPACE BAR[/color][/b] again to stop the power bar and take the shot.[/center]"
+text = "Press the SPACE BAR again to stop the power bar and take the shot."
 fit_content_height = true
 script = ExtResource( 7 )
 step_number = 5
