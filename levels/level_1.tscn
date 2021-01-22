@@ -18,6 +18,9 @@ propagation = 0.7
 [node name="LevelBase" instance=ExtResource( 1 )]
 level_number = 1
 
+[node name="Player" parent="." index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.254, 4.685, -8.901 )
+
 [node name="Camera" parent="Player/Camera_Container/Rotation_Helper" index="0"]
 transform = Transform( 1, -8.9407e-08, 5.96046e-08, 2.98023e-08, 1, 2.08616e-07, 0, 1.49012e-08, 1, 0, 0, 0 )
 
