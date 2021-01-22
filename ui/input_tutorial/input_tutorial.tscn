@@ -11,7 +11,7 @@
 [node name="TutorialOverlay" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_bottom = -120.0
+margin_bottom = -90.0
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -20,9 +20,9 @@ step_count = 5
 
 [node name="Step_1" type="RichTextLabel" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-margin_top = 523.0
+margin_top = 583.0
 margin_right = 1280.0
-margin_bottom = 600.0
+margin_bottom = 630.0
 size_flags_vertical = 8
 custom_fonts/bold_font = ExtResource( 6 )
 custom_fonts/normal_font = ExtResource( 2 )
@@ -37,9 +37,9 @@ step_number = 1
 
 [node name="Step_2" type="RichTextLabel" parent="."]
 visible = false
-margin_top = 523.0
+margin_top = 583.0
 margin_right = 1280.0
-margin_bottom = 600.0
+margin_bottom = 630.0
 size_flags_vertical = 8
 custom_fonts/bold_font = ExtResource( 6 )
 custom_fonts/normal_font = ExtResource( 2 )
@@ -51,27 +51,24 @@ script = ExtResource( 4 )
 step_number = 2
 
 [node name="Step_3" type="RichTextLabel" parent="."]
-visible = false
-margin_top = 446.0
+margin_top = 583.0
 margin_right = 1280.0
-margin_bottom = 600.0
+margin_bottom = 630.0
 size_flags_vertical = 8
 custom_fonts/bold_font = ExtResource( 6 )
 custom_fonts/normal_font = ExtResource( 2 )
 bbcode_enabled = true
-bbcode_text = "[center]Use the [b][color=yellow]A[/color][/b] and [b][color=yellow]D[/color][/b] keys to aim.
-Hold [b][color=yellow]SHIFT[/color][/b] to aim more precisely[/center]"
-text = "Use the A and D keys to aim.
-Hold SHIFT to aim more precisely"
+bbcode_text = "[center]Use the [b][color=yellow]A[/color][/b] and [b][color=yellow]D[/color][/b] keys to aim. Hold [b][color=yellow]SHIFT[/color][/b] to aim more precisely[/center]"
+text = "Use the A and D keys to aim. Hold SHIFT to aim more precisely"
 fit_content_height = true
 script = ExtResource( 5 )
 step_number = 3
 
 [node name="Step_4" type="RichTextLabel" parent="."]
 visible = false
-margin_top = 523.0
+margin_top = 583.0
 margin_right = 1280.0
-margin_bottom = 600.0
+margin_bottom = 630.0
 size_flags_vertical = 8
 custom_fonts/bold_font = ExtResource( 6 )
 custom_fonts/normal_font = ExtResource( 2 )
@@ -83,17 +80,16 @@ script = ExtResource( 7 )
 step_number = 4
 
 [node name="Step_5" type="RichTextLabel" parent="."]
-margin_top = 472.0
+visible = false
+margin_top = 583.0
 margin_right = 1280.0
-margin_bottom = 600.0
+margin_bottom = 630.0
 size_flags_vertical = 8
 custom_fonts/bold_font = ExtResource( 6 )
 custom_fonts/normal_font = ExtResource( 2 )
 bbcode_enabled = true
-bbcode_text = "[center]Press the [b][color=yellow]SPACE BAR[/color][/b] to stop the
-power bar and take the shot.[/center]"
-text = "Press the SPACE BAR to stop the
-power bar and take the shot."
+bbcode_text = "[center]Press the [b][color=yellow]SPACE BAR[/color][/b] to stop the power bar and take the shot.[/center]"
+text = "Press the SPACE BAR to stop the power bar and take the shot."
 fit_content_height = true
 script = ExtResource( 7 )
 step_number = 5
