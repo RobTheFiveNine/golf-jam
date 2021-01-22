@@ -17,7 +17,6 @@ func _input(event):
         return
 
     if Input.is_action_just_pressed("action"):
-        print("do the thing")
         if is_active:
             is_active = false
             is_set = true
@@ -38,7 +37,6 @@ func fade_out():
     tween.start()
 
 func reset():
-    print("reset")
     is_set = false
     is_active = false
     progress_bar.value = 0
