@@ -15,7 +15,6 @@ export (float) var deceleration = 16
 
 var velocity = Vector3()
 var default_fov = 0
-var zoom_level = 1
 var input_mode = INPUT_MODE_FREE_VIEW
 
 onready var camera_container = $Camera_Container
@@ -56,9 +55,6 @@ func handle_movement(delta):
 func _process(delta):
     if Input.is_action_just_pressed("ui_end"):
         get_tree().quit()
-        
-    if Input.is_action_just_pressed("cycle_zoom"):
-        cycle_zoom_level()
 
     if Input.is_action_just_pressed("toggle_input_mode"):
         if input_mode == INPUT_MODE_FREE_VIEW:
@@ -71,12 +67,7 @@ func _process(delta):
     if input_mode == INPUT_MODE_FREE_VIEW:
         return handle_movement(delta)
     
-func cycle_zoom_level():
-    if zoom_level == 3:
-        zoom_level = 1
-    else:
-        zoom_level += 1
-        
+func _on_ZoomLevel_level_changed(zoom_level):
     zoom.interpolate_property(
         camera,
         "fov",

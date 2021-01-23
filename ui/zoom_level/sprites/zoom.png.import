@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/zoom.png-5322ab2a5a866ba80329c631f87561c9.stex"
+path="res://.import/zoom.png-6162009808cc2ba00133a62418b2e1ed.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/sprites/zoom.png"
-dest_files=[ "res://.import/zoom.png-5322ab2a5a866ba80329c631f87561c9.stex" ]
+source_file="res://ui/zoom_level/sprites/zoom.png"
+dest_files=[ "res://.import/zoom.png-6162009808cc2ba00133a62418b2e1ed.stex" ]
 
 [params]
 

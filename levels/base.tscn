@@ -4,7 +4,7 @@
 [ext_resource path="res://fonts/kenney_future.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://environments/default_sky.tres" type="ProceduralSky" id=3]
 [ext_resource path="res://prefabs/balls/red_ball.tscn" type="PackedScene" id=4]
-[ext_resource path="res://ui/sprites/zoom.png" type="Texture" id=5]
+[ext_resource path="res://ui/zoom_level/zoom_level.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scripts/frame_rate_label.gd" type="Script" id=6]
 [ext_resource path="res://prefabs/actors/player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://ui/level_complete_overlay.tscn" type="PackedScene" id=8]
@@ -236,56 +236,13 @@ margin_bottom = 99.0
 custom_fonts/font = SubResource( 5 )
 text = "3 SHOTS"
 
-[node name="ZoomLevel" type="HBoxContainer" parent="."]
-margin_left = 50.0
-margin_top = 90.0
-custom_constants/separation = -10
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect4" type="TextureRect" parent="ZoomLevel"]
-margin_right = 38.0
-margin_bottom = 38.0
-rect_min_size = Vector2( 38, 38 )
-size_flags_horizontal = 4
-size_flags_vertical = 2
-texture = ExtResource( 5 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect5" type="TextureRect" parent="ZoomLevel"]
-margin_left = 28.0
-margin_right = 66.0
-margin_bottom = 38.0
-rect_min_size = Vector2( 38, 38 )
-size_flags_horizontal = 4
-size_flags_vertical = 2
-texture = ExtResource( 5 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect6" type="TextureRect" parent="ZoomLevel"]
-margin_left = 56.0
-margin_right = 94.0
-margin_bottom = 38.0
-rect_min_size = Vector2( 38, 38 )
-size_flags_horizontal = 4
-size_flags_vertical = 2
-texture = ExtResource( 5 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="PowerBar" parent="." instance=ExtResource( 12 )]
+
+[node name="ZoomLevel" parent="." instance=ExtResource( 5 )]
 [connection signal="input_mode_changed" from="Player" to="." method="_on_Player_input_mode_changed"]
 [connection signal="reset" from="Club" to="PowerBar" method="reset"]
 [connection signal="ball_stopped" from="Ball" to="Club" method="_on_ball_stopped"]
 [connection signal="power_set" from="PowerBar" to="Club" method="swing"]
+[connection signal="level_changed" from="ZoomLevel" to="Player" method="_on_ZoomLevel_level_changed"]
 
 [editable path="Player"]
