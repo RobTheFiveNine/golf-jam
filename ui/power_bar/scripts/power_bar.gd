@@ -12,7 +12,7 @@ var is_set : bool = false
 func _ready():
     modulate = Color("00ffffff")
 
-func _input(event):
+func _process(delta):
     if is_set:
         return
 
