@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/joystickLeft.png-32eff86bbe592322836ce04c75b4cc9c.stex"
+path="res://.import/star_x0.75.png-fb59389ec1cc8542db5bf69c9170090a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/sprites/joystickLeft.png"
-dest_files=[ "res://.import/joystickLeft.png-32eff86bbe592322836ce04c75b4cc9c.stex" ]
+source_file="res://ui/star_requirements/sprites/star_x0.75.png"
+dest_files=[ "res://.import/star_x0.75.png-fb59389ec1cc8542db5bf69c9170090a.stex" ]
 
 [params]
 
