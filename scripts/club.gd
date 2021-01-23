@@ -5,6 +5,7 @@ export (float) var aim_speed = 2.4
 export (float) var max_power = 10
 
 signal reset
+signal ball_hit
 
 onready var animation_player = $AnimationPlayer
 onready var static_body = $StaticBody
@@ -65,12 +66,13 @@ func _process(delta):
 
     draw_aim_assist()
 
-func hit_ball():    
+func hit_ball():
     aim_line.clear()
     ball.sleeping = false
 
     var impulse = global_transform.basis.x * (max_power * power_modifier) * -1
     ball.apply_central_impulse(impulse)
+    emit_signal("ball_hit")
 
 func _on_ball_stopped():
     if not ball_in_hole:
