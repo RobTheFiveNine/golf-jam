@@ -15,6 +15,8 @@ func _ready():
         two_star_shots,
         three_star_shots
     )
+    
+    $OutOfBounds.visible = false
 
 func _on_Player_input_mode_changed(mode):
     club._on_input_mode_changed(mode)

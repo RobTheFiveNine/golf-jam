@@ -66,6 +66,10 @@ dynamic_range = 1
 data = SubResource( 1 )
 
 [node name="TutorialOverlay" parent="." index="9" instance=ExtResource( 3 )]
+
+[node name="OutOfBounds" parent="." index="15"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0687386, -2.41104, 0 )
+[connection signal="reset" from="Club" to="PowerBar" method="reset"]
 [connection signal="ball_entered_hole" from="Course/HoleSquare" to="." method="_on_ball_entered_hole"]
 [connection signal="ball_exited_hole" from="Course/HoleSquare" to="." method="_on_ball_exited_hole"]
 [connection signal="level_finished" from="Course/HoleSquare" to="." method="_on_level_finished"]
