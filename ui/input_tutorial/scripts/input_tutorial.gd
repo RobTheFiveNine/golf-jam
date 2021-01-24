@@ -22,14 +22,14 @@ func load_step(step_number):
     var node = find_step(step_number)
     var initial_value = Color("00ffffff")
     var final_value = Color("ffffffff")
-    fade_in.interpolate_property(node, "modulate", initial_value, final_value, 0.5, Tween.TRANS_LINEAR, 0, 0.3)
+    fade_in.interpolate_property(node, "modulate", initial_value, final_value, 0.25, Tween.TRANS_LINEAR, 0, 0.175)
     fade_in.start()
 
 func complete_step(step_number):
     var node = find_step(step_number)
     var initial_value = Color("ffffffff")
     var final_value = Color("00ffffff")
-    fade_out.interpolate_property(node, "modulate", initial_value, final_value, 0.5, Tween.TRANS_LINEAR, 0)
+    fade_out.interpolate_property(node, "modulate", initial_value, final_value, 0.25, Tween.TRANS_LINEAR, 0)
     fade_out.start()
 
 func _on_criteria_met(step_number):
