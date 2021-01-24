@@ -27,10 +27,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.254, 4.685, -8.901 )
 [node name="Camera" parent="Player/Camera_Container/Rotation_Helper" index="0"]
 transform = Transform( 1, -8.9407e-08, 5.96046e-08, 2.98023e-08, 1, 2.08616e-07, 0, 1.49012e-08, 1, 0, 0, 0 )
 
-[node name="Club" parent="." index="3"]
+[node name="Club" parent="." index="2"]
 transform = Transform( -0.8343, 0, -0.551311, 0, 1, 0, 0.551311, 0, -0.8343, -0.164224, 2.47574, -6.64202 )
 
-[node name="Ball" parent="." index="4"]
+[node name="Ball" parent="." index="3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0253463, 0.1979, -6.88178 )
 
 [node name="Course" type="Spatial" parent="." index="6"]
@@ -67,9 +67,8 @@ data = SubResource( 1 )
 
 [node name="TutorialOverlay" parent="." index="9" instance=ExtResource( 3 )]
 
-[node name="OutOfBounds" parent="." index="15"]
+[node name="OutOfBounds" parent="." index="14"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0687386, -2.41104, 0 )
-[connection signal="reset" from="Club" to="PowerBar" method="reset"]
 [connection signal="ball_entered_hole" from="Course/HoleSquare" to="." method="_on_ball_entered_hole"]
 [connection signal="ball_exited_hole" from="Course/HoleSquare" to="." method="_on_ball_exited_hole"]
 [connection signal="level_finished" from="Course/HoleSquare" to="." method="_on_level_finished"]
