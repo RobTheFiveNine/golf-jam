@@ -8,10 +8,11 @@
 [ext_resource path="res://prefabs/actors/player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://ui/level_complete_overlay/level_complete_overlay.tscn" type="PackedScene" id=8]
 [ext_resource path="res://prefabs/clubs/blue/club_blue.tscn" type="PackedScene" id=9]
-[ext_resource path="res://scripts/level.gd" type="Script" id=10]
+[ext_resource path="res://levels/base/scripts/level.gd" type="Script" id=10]
 [ext_resource path="res://ui/shot_counter/shot_counter.tscn" type="PackedScene" id=11]
 [ext_resource path="res://ui/power_bar/power_bar.tscn" type="PackedScene" id=12]
 [ext_resource path="res://ui/pause_menu/pause_menu.tscn" type="PackedScene" id=13]
+
 
 [sub_resource type="Environment" id=1]
 background_mode = 3

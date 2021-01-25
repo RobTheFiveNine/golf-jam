@@ -15,5 +15,4 @@ func _on_HoleArea_body_exited(body):
     finish_timer.stop()
 
 func _on_FinishTimer_timeout():
-    print('Hole made!')
     emit_signal("level_finished")

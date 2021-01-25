@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Spatial",
 "class": "Player",
 "language": "GDScript",
-"path": "res://scripts/player.gd"
+"path": "res://levels/base/scripts/player.gd"
 }, {
 "base": "Control",
 "class": "TutorialStep",
@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Golf Jam"
-run/main_scene="res://levels/level_1.tscn"
+run/main_scene="res://levels/level_1/level_1.tscn"
 config/icon="res://icon.png"
 
 [display]
