@@ -13,7 +13,8 @@ func _process(delta):
         if is_open:
             close_menu()
         else:
-            open_menu()
+            if not get_tree().paused:
+                open_menu()
 
 func open_menu():
     is_open = true

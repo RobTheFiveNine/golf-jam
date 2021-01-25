@@ -6,7 +6,7 @@
 [ext_resource path="res://prefabs/balls/red_ball.tscn" type="PackedScene" id=4]
 [ext_resource path="res://ui/zoom_level/zoom_level.tscn" type="PackedScene" id=5]
 [ext_resource path="res://prefabs/actors/player.tscn" type="PackedScene" id=7]
-[ext_resource path="res://ui/level_complete_overlay.tscn" type="PackedScene" id=8]
+[ext_resource path="res://ui/level_complete_overlay/level_complete_overlay.tscn" type="PackedScene" id=8]
 [ext_resource path="res://prefabs/clubs/blue/club_blue.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scripts/level.gd" type="Script" id=10]
 [ext_resource path="res://ui/shot_counter/shot_counter.tscn" type="PackedScene" id=11]
@@ -86,16 +86,18 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.04675, -8.47376, 0 )
 mesh = SubResource( 4 )
 
 [node name="LevelCompleteOverlay" parent="." instance=ExtResource( 8 )]
-modulate = Color( 1, 1, 1, 0 )
+pause_mode = 2
+modulate = Color( 1, 1, 1, 1 )
 margin_left = -1.86536
 margin_right = -1.86536
 mouse_filter = 2
 
 [node name="PauseMenu" parent="." instance=ExtResource( 13 )]
 visible = false
-[connection signal="input_mode_changed" from="Player" to="." method="_on_Player_input_mode_changed"]
 [connection signal="input_mode_changed" from="Player" to="InputMode" method="_on_Player_input_mode_changed"]
+[connection signal="input_mode_changed" from="Player" to="." method="_on_Player_input_mode_changed"]
 [connection signal="ball_hit" from="Club" to="ShotCounter" method="increment"]
+[connection signal="ball_hit" from="Club" to="." method="_on_Club_ball_hit"]
 [connection signal="reset" from="Club" to="StarRequirements" method="_on_club_reset"]
 [connection signal="reset" from="Club" to="PowerBar" method="reset"]
 [connection signal="ball_stopped" from="Ball" to="Club" method="_on_ball_stopped"]
