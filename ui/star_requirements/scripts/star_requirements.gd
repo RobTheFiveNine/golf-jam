@@ -28,7 +28,7 @@ func set_star_value(star_count, requirement):
     else:
         node.text = "%s shot" % requirement
 
-func set_requirements(s3, s2, s1):
+func set_requirements(s1, s2, s3):
     requirements = [s1, s2, s3]
 
     set_star_value(1, s1)
