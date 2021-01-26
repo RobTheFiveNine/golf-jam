@@ -13,7 +13,6 @@
 [ext_resource path="res://ui/power_bar/power_bar.tscn" type="PackedScene" id=12]
 [ext_resource path="res://ui/pause_menu/pause_menu.tscn" type="PackedScene" id=13]
 
-
 [sub_resource type="Environment" id=1]
 background_mode = 3
 background_sky = ExtResource( 3 )
@@ -21,19 +20,19 @@ background_color = Color( 0.113725, 0.113725, 0.137255, 1 )
 tonemap_mode = 2
 
 [sub_resource type="Animation" id=2]
-resource_name = "Complete"
-length = 0.25
+resource_name = "FadeIn"
+length = 0.5
 tracks/0/type = "value"
-tracks/0/path = NodePath("LevelCompleteOverlay:modulate")
+tracks/0/path = NodePath("TransitionOverlay:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [sub_resource type="SpatialMaterial" id=3]
@@ -70,7 +69,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0173099, 0.206409, -7.0222 
 out_of_bounds_path = NodePath("../OutOfBounds")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Complete = SubResource( 2 )
+anims/FadeIn = SubResource( 2 )
 
 [node name="StarRequirements" parent="." instance=ExtResource( 1 )]
 
@@ -88,17 +87,27 @@ mesh = SubResource( 4 )
 
 [node name="LevelCompleteOverlay" parent="." instance=ExtResource( 8 )]
 pause_mode = 2
-modulate = Color( 1, 1, 1, 1 )
+modulate = Color( 1, 1, 1, 0 )
 margin_left = -1.86536
 margin_right = -1.86536
 mouse_filter = 2
 
 [node name="PauseMenu" parent="." instance=ExtResource( 13 )]
 visible = false
-[connection signal="input_mode_changed" from="Player" to="InputMode" method="_on_Player_input_mode_changed"]
+
+[node name="TransitionOverlay" type="ColorRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="input_mode_changed" from="Player" to="." method="_on_Player_input_mode_changed"]
-[connection signal="ball_hit" from="Club" to="ShotCounter" method="increment"]
+[connection signal="input_mode_changed" from="Player" to="InputMode" method="_on_Player_input_mode_changed"]
 [connection signal="ball_hit" from="Club" to="." method="_on_Club_ball_hit"]
+[connection signal="ball_hit" from="Club" to="ShotCounter" method="increment"]
 [connection signal="reset" from="Club" to="StarRequirements" method="_on_club_reset"]
 [connection signal="reset" from="Club" to="PowerBar" method="reset"]
 [connection signal="ball_stopped" from="Ball" to="Club" method="_on_ball_stopped"]

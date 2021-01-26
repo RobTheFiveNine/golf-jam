@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://levels/base/base.tscn" type="PackedScene" id=1]
+
+[node name="LevelBase" instance=ExtResource( 1 )]
+level_number = 2
+[connection signal="reset" from="Club" to="PowerBar" method="reset"]
+
+[editable path="Player"]

@@ -9,6 +9,16 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Control",
+"class": "CenteredOffsetControl",
+"language": "GDScript",
+"path": "res://scripts/centered_offset_control.gd"
+}, {
+"base": "Node",
+"class": "Level",
+"language": "GDScript",
+"path": "res://levels/base/scripts/level.gd"
+}, {
 "base": "Spatial",
 "class": "Player",
 "language": "GDScript",
@@ -20,6 +30,8 @@ _global_script_classes=[ {
 "path": "res://ui/input_tutorial/scripts/tutorial_step.gd"
 } ]
 _global_script_class_icons={
+"CenteredOffsetControl": "",
+"Level": "",
 "Player": "",
 "TutorialStep": ""
 }
@@ -30,10 +42,16 @@ config/name="Golf Jam"
 run/main_scene="res://levels/level_1/level_1.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://scripts/global.gd"
+
 [display]
 
-window/size/width=1280
-window/size/height=720
+window/size/width=1920
+window/size/height=1080
+window/size/test_width=1280
+window/size/test_height=720
 
 [input]
 

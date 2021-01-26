@@ -7,6 +7,7 @@ onready var input_label : Label = $CenterContainer/VBoxContainer/InputLabel
 onready var animation : AnimationPlayer = $AnimationPlayer
 
 var stars_earned : int
+var input_enabled : bool = false
 
 func _ready():
     modulate = Color("00ffffff")
@@ -14,7 +15,7 @@ func _ready():
     star_one.rect_min_size = Vector2.ZERO
     star_two.rect_min_size = Vector2.ZERO
     star_three.rect_min_size = Vector2.ZERO
-    
+
 func animate_stars():
     if stars_earned == 0:
         animation.play("NoStars")
@@ -34,3 +35,16 @@ func _on_animation_finished(anim_name):
         animate_stars()
     elif anim_name != "FadeInInput":
         animation.play("FadeInInput")
+    elif anim_name == "FadeInInput":
+        input_enabled = true
+
+func _input(event):
+    if not input_enabled:
+        return
+
+    if event is InputEventKey:
+        input_enabled = false
+        animation.play("CompleteLevel")
+
+func load_next_level():
+    Global.load_next_level()
