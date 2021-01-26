@@ -13,6 +13,7 @@ onready var mesh = $Mesh
 onready var aim_cast = $Mesh/RayCast
 onready var aim_line = $ImmediateGeometry
 onready var tween : Tween = $HitTween
+onready var hit_sound : AudioStreamPlayer3D = $Mesh/AudioStreamPlayer3D
 
 var ball : RigidBody
 var ball_in_hole : bool = false
@@ -72,6 +73,7 @@ func hit_ball():
 
     var impulse = global_transform.basis.x * (max_power * power_modifier) * -1
     ball.apply_central_impulse(impulse)
+    hit_sound.play()
     emit_signal("ball_hit")
 
 func _on_ball_stopped():
