@@ -39,7 +39,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Golf Jam"
-run/main_scene="res://levels/level_1/level_1.tscn"
+run/main_scene="res://title/title.tscn"
 config/icon="res://icon.png"
 
 [autoload]
