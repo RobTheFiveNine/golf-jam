@@ -70,7 +70,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=8]
 length = 0.2
 tracks/0/type = "value"
-tracks/0/path = NodePath("CenterContainer/VBoxContainer/InputLabel:modulate")
+tracks/0/path = NodePath("CenterContainer/VBoxContainer/MarginContainer/InputLabel:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -420,9 +420,9 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 margin_left = 468.0
-margin_top = 369.0
+margin_top = 361.0
 margin_right = 1452.0
-margin_bottom = 711.0
+margin_bottom = 718.0
 custom_constants/separation = 20
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
@@ -509,10 +509,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="InputLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/VBoxContainer"]
 margin_top = 304.0
 margin_right = 984.0
-margin_bottom = 342.0
+margin_bottom = 357.0
+custom_constants/margin_top = 15
+
+[node name="InputLabel" type="Label" parent="CenterContainer/VBoxContainer/MarginContainer"]
+margin_top = 15.0
+margin_right = 984.0
+margin_bottom = 53.0
 custom_fonts/font = SubResource( 5 )
 text = "PRESS ANY KEY TO CONTINUE"
 align = 1

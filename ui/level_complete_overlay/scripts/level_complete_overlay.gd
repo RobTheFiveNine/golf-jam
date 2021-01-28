@@ -3,7 +3,7 @@ extends Control
 onready var star_one : TextureRect = $CenterContainer/VBoxContainer/HBoxContainer/StarOne/Texture
 onready var star_two : TextureRect = $CenterContainer/VBoxContainer/HBoxContainer/StarTwo/Texture
 onready var star_three : TextureRect = $CenterContainer/VBoxContainer/HBoxContainer/StarThree/Texture
-onready var input_label : Label = $CenterContainer/VBoxContainer/InputLabel
+onready var input_label : Label = $CenterContainer/VBoxContainer/MarginContainer/InputLabel
 onready var animation : AnimationPlayer = $AnimationPlayer
 
 var stars_earned : int
