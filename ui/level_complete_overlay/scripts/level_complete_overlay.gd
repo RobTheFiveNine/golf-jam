@@ -5,6 +5,8 @@ onready var star_two : TextureRect = $CenterContainer/VBoxContainer/HBoxContaine
 onready var star_three : TextureRect = $CenterContainer/VBoxContainer/HBoxContainer/StarThree/Texture
 onready var input_label : Label = $CenterContainer/VBoxContainer/MarginContainer/InputLabel
 onready var animation : AnimationPlayer = $AnimationPlayer
+onready var in_audio : AudioStreamPlayer = $InAudio
+onready var out_audio : AudioStreamPlayer = $OutAudio
 
 var stars_earned : int
 var input_enabled : bool = false
@@ -29,6 +31,7 @@ func animate_stars():
 func show_overlay(stars):
     stars_earned = stars
     animation.play("FadeIn")
+    in_audio.play()
 
 func _on_animation_finished(anim_name):
     if anim_name == "FadeIn":
@@ -44,6 +47,7 @@ func _input(event):
 
     if event is InputEventKey:
         input_enabled = false
+        out_audio.play()
         animation.play("CompleteLevel")
 
 func load_next_level():

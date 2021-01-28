@@ -1,8 +1,10 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://shaders/blur.shader" type="Shader" id=1]
 [ext_resource path="res://ui/level_complete_overlay/sprites/star_x2.png" type="Texture" id=2]
 [ext_resource path="res://ui/level_complete_overlay/scripts/level_complete_overlay.gd" type="Script" id=3]
+[ext_resource path="res://ui/level_complete_overlay/audio/confirmation_002.wav" type="AudioStream" id=4]
+[ext_resource path="res://ui/level_complete_overlay/audio/confirmation_004.wav" type="AudioStream" id=5]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 1 )
@@ -24,7 +26,7 @@ font_data = SubResource( 4 )
 
 [sub_resource type="Animation" id=6]
 resource_name = "CompleteLevel"
-length = 0.3
+length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
@@ -32,7 +34,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
+"times": PoolRealArray( 0, 0.6 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
@@ -44,7 +46,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.3 ),
+"times": PoolRealArray( 0.6 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -531,4 +533,10 @@ anims/NoStars = SubResource( 9 )
 anims/OneStar = SubResource( 10 )
 anims/ThreeStar = SubResource( 11 )
 anims/TwoStar = SubResource( 12 )
+
+[node name="InAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="OutAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_finished"]
