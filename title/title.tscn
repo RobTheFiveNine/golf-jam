@@ -5,11 +5,11 @@
 [ext_resource path="res://title/scripts/title.gd" type="Script" id=3]
 [ext_resource path="res://shaders/blur.shader" type="Shader" id=4]
 
-[sub_resource type="ShaderMaterial" id=2]
+[sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 4 )
 shader_param/blur_amount = 1.5
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 156
 font_data = ExtResource( 1 )
 
@@ -33,7 +33,7 @@ tracks/0/keys = {
 script = ExtResource( 3 )
 
 [node name="Blur" type="ColorRect" parent="."]
-material = SubResource( 2 )
+material = SubResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -71,7 +71,7 @@ text = "Start Game"
 [node name="Label" type="Label" parent="."]
 anchor_right = 1.0
 anchor_bottom = 0.5
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "GOLF JAM"
 align = 1
 valign = 2

@@ -2,6 +2,7 @@ extends Node
 
 var level_count = 1
 var root : Node
+var total_stars : int = 0
 
 func _ready():
     root = get_tree().get_root()
@@ -11,9 +12,10 @@ func get_current_level() -> Level:
 
 func load_next_level():
     var current_level = get_current_level()
+    total_stars += current_level.get_star_rating()
+
     if current_level.next_scene:
         get_tree().change_scene_to(current_level.next_scene)
         get_tree().paused = false
     else:
-        print("Load end game stats")
-        pass
+        get_tree().change_scene("res://credits/credits.tscn")

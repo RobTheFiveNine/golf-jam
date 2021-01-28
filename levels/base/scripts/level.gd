@@ -27,10 +27,8 @@ func _ready():
 
 func _on_Player_input_mode_changed(mode):
     club._on_input_mode_changed(mode)
-
-func _on_level_finished():
-    get_tree().paused = true
-
+    
+func get_star_rating():
     var stars = 0
     
     if shots_taken <= one_star_shots:
@@ -41,8 +39,12 @@ func _on_level_finished():
         
     if shots_taken <= three_star_shots:
         stars = 3
+        
+    return stars
 
-    $LevelCompleteOverlay.show_overlay(stars)
+func _on_level_finished():
+    get_tree().paused = true
+    $LevelCompleteOverlay.show_overlay(get_star_rating())
 
 func _on_ball_entered_hole():
     club._on_ball_entered_hole()
