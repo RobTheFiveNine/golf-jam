@@ -536,7 +536,9 @@ anims/TwoStar = SubResource( 12 )
 
 [node name="InAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = -2.0
 
 [node name="OutAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
+volume_db = -2.0
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_finished"]
