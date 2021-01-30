@@ -3,12 +3,16 @@ extends Control
 onready var animation : AnimationPlayer = $AnimationPlayer
 onready var resume_button : Button = $VBoxContainer/ResumeButton
 onready var exit_button : Button = $VBoxContainer/ExitButton
+onready var restart_button : Button = $VBoxContainer/RestartLevel
 
 var is_open : bool = false
 
 func _ready():
     modulate = Color("00ffffff")
     visible = true
+    resume_button.disabled = true
+    exit_button.disabled = true
+    restart_button.disabled = true
     
 func _process(delta):
     if Input.is_action_just_pressed("ui_cancel"):
@@ -25,6 +29,7 @@ func open_menu():
     animation.play("FadeIn")
     resume_button.disabled = false
     exit_button.disabled = false
+    restart_button.disabled = false
     
 func close_menu():
     is_open = false
@@ -33,6 +38,8 @@ func close_menu():
     animation.play("FadeOut")
     resume_button.disabled = true
     exit_button.disabled = true
+    restart_button.disabled = true
+    
 
 func _on_ResumeButton_pressed():
     if is_open:
@@ -43,5 +50,6 @@ func _on_ExitButton_pressed():
         get_tree().quit()
 
 func _on_RestartLevel_pressed():
-    get_tree().reload_current_scene()
-    get_tree().paused = false
+    if is_open:
+        get_tree().reload_current_scene()
+        get_tree().paused = false

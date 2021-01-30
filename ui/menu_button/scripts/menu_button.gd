@@ -8,7 +8,9 @@ func _ready():
     connect("mouse_entered", self, "_on_mouse_entered")
 
 func _on_pressed():
-    click.play()
+    if not disabled:
+        click.play()
 
 func _on_mouse_entered():
-    hover.play()
+    if not disabled:
+        hover.play()
