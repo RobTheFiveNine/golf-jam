@@ -21,9 +21,6 @@ one_star_shots = 3
 two_star_shots = 2
 three_star_shots = 1
 
-[node name="Player" parent="." index="1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.254, 4.685, -8.901 )
-
 [node name="Camera" parent="Player/Camera_Container/Rotation_Helper" index="0"]
 transform = Transform( 1, -8.9407e-08, 5.96046e-08, 2.98023e-08, 1, 2.08616e-07, 0, 1.49012e-08, 1, 0, 0, 0 )
 
@@ -45,7 +42,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -9.06594 )
 [node name="EndWalls" parent="Course" index="2" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.002, 0, -11 )
 
-[node name="HoleSquare" parent="Course" index="3" instance=ExtResource( 4 )]
+[node name="Hole" parent="Course" index="3" instance=ExtResource( 4 )]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -1.99988, -2.38419e-07, -5.20633 )
 
 [node name="DirectionalLight3" type="DirectionalLight" parent="." index="7"]
@@ -69,8 +66,6 @@ data = SubResource( 1 )
 
 [node name="OutOfBounds" parent="." index="14"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0687386, -2.41104, 0 )
-[connection signal="ball_entered_hole" from="Course/HoleSquare" to="." method="_on_ball_entered_hole"]
-[connection signal="ball_exited_hole" from="Course/HoleSquare" to="." method="_on_ball_exited_hole"]
-[connection signal="level_finished" from="Course/HoleSquare" to="." method="_on_level_finished"]
+[connection signal="reset" from="Club" to="PowerBar" method="reset"]
 
 [editable path="Player"]

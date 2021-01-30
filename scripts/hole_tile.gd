@@ -1,5 +1,7 @@
 extends Spatial
 
+class_name HoleTile
+
 signal level_finished
 signal ball_entered_hole
 signal ball_exited_hole

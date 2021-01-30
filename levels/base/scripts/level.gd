@@ -11,6 +11,7 @@ export (PackedScene) var next_scene
 onready var camera_mode_label = $CanvasLayer/CameraModeLabel
 onready var club = $Club
 onready var animation_player = $AnimationPlayer
+onready var hole : HoleTile = $Course/Hole
 
 var shots_taken : int = 0
 
@@ -24,6 +25,10 @@ func _ready():
     
     $OutOfBounds.visible = false
     animation_player.play("FadeIn")
+    
+    hole.connect("ball_entered_hole", self, "_on_ball_entered_hole")
+    hole.connect("ball_exited_hole", self, "_on_ball_exited_hole")
+    hole.connect("level_finished", self, "_on_level_finished")
 
 func _on_Player_input_mode_changed(mode):
     club._on_input_mode_changed(mode)
