@@ -437,7 +437,7 @@ anims/Swing = SubResource( 4 )
 
 [node name="RayCast" type="RayCast" parent="Mesh"]
 enabled = true
-cast_to = Vector3( -10, 0, 0 )
+cast_to = Vector3( -500, 0, 0 )
 
 [node name="club_blue" parent="Mesh" instance=ExtResource( 1 )]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.76801, 0 )
