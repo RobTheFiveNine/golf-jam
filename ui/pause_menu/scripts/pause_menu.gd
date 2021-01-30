@@ -41,3 +41,7 @@ func _on_ResumeButton_pressed():
 func _on_ExitButton_pressed():
     if is_open:
         get_tree().quit()
+
+func _on_RestartLevel_pressed():
+    get_tree().reload_current_scene()
+    get_tree().paused = false
