@@ -112,6 +112,7 @@ toggle_input_mode={
 3d_physics/layer_1="Platforms"
 3d_physics/layer_2="Balls"
 3d_physics/layer_3="FinishAreas"
+3d_physics/layer_4="MovingPlatforms"
 
 [rendering]
 
