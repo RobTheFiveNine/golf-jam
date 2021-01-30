@@ -4,9 +4,6 @@
 [ext_resource path="res://levels/base/scripts/ball.gd" type="Script" id=2]
 [ext_resource path="res://levels/base/scripts/follow_node.gd" type="Script" id=3]
 
-
-
-
 [sub_resource type="PhysicsMaterial" id=1]
 bounce = 0.5
 
@@ -26,7 +23,7 @@ target_path = NodePath("../../Ball/RigidBody")
 collision_layer = 2
 physics_material_override = SubResource( 1 )
 linear_damp = 0.5
-angular_damp = 0.5
+angular_damp = 1.5
 __meta__ = {
 "_edit_group_": true
 }
