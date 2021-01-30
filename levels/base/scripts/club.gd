@@ -13,7 +13,7 @@ onready var mesh = $Mesh
 onready var aim_cast = $Mesh/RayCast
 onready var aim_line = $ImmediateGeometry
 onready var tween : Tween = $HitTween
-onready var hit_sound : AudioStreamPlayer3D = $Mesh/AudioStreamPlayer3D
+onready var hit_sound : AudioStreamPlayer = $Mesh/AudioStreamPlayer
 
 var ball : RigidBody
 var ball_in_hole : bool = false
