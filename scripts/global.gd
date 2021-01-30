@@ -1,6 +1,6 @@
 extends Node
 
-var level_count = 1
+var level_count = 2
 var root : Node
 var total_stars : int = 0
 
