@@ -12,7 +12,7 @@ var finish_timer : Timer
 
 func _ready():
     finish_timer = Timer.new()
-    finish_timer.wait_time = 3
+    finish_timer.wait_time = 2
     finish_timer.one_shot = true
     finish_timer.connect("timeout", self, "_on_FinishTimer_timeout")
     add_child(finish_timer)
