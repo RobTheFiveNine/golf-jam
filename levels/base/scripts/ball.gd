@@ -12,10 +12,12 @@ var last_position : Vector3
 
 func _physics_process(delta):
     var velocity_length = rigidbody.linear_velocity.length()
+    var on_floor = raycast.is_colliding()
 
-    if raycast.is_colliding() and velocity_length < 0.03 and velocity_length > 0:
+    if on_floor and velocity_length < 0.03 and velocity_length > 0:
         rigidbody.sleeping = true
         last_position = rigidbody.transform.origin
+
         emit_signal("ball_stopped")
 
     if rigidbody.global_transform.origin.y < out_of_bounds.global_transform.origin.y:
