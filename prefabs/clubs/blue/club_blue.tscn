@@ -450,6 +450,8 @@ material/3 = ExtResource( 6 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Mesh"]
 stream = ExtResource( 7 )
+volume_db = -20.0
+pitch_scale = 1.5
 
 [node name="ImmediateGeometry" type="ImmediateGeometry" parent="."]
 material_override = SubResource( 5 )
