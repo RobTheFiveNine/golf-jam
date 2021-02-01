@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://levels/base/base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://prefabs/tiles/end_walls.tscn" type="PackedScene" id=2]
@@ -10,18 +10,7 @@
 [ext_resource path="res://prefabs/tiles/side.tscn" type="PackedScene" id=8]
 [ext_resource path="res://levels/level_3/level_3.tscn" type="PackedScene" id=9]
 [ext_resource path="res://prefabs/lights/directional_light.tscn" type="PackedScene" id=10]
-
-[sub_resource type="BoxShape" id=2]
-extents = Vector3( 3, 0.0729815, 1.37862 )
-
-[sub_resource type="BoxShape" id=5]
-extents = Vector3( 1.00102, 0.0729815, 2.10666 )
-
-[sub_resource type="BoxShape" id=3]
-extents = Vector3( 3, 0.0729815, 1.3895 )
-
-[sub_resource type="BoxShape" id=4]
-extents = Vector3( 1.46233, 0.0729815, 0.193025 )
+[ext_resource path="res://scripts/margin_adjuster.gd" type="Script" id=11]
 
 [sub_resource type="GIProbeData" id=1]
 bounds = AABB( -5, -2, -7, 10, 4, 14 )
@@ -47,7 +36,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.212, 4.633, -7.916 )
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.131209, 2.55406, -7.3451 )
 
 [node name="Ball" parent="." index="3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.203057, -7 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2031, -7 )
 
 [node name="Course" type="Spatial" parent="." index="14"]
 
@@ -87,27 +76,14 @@ transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, -
 [node name="EndWalls" parent="Course" index="11" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7 )
 
-[node name="StaticBody" type="StaticBody" parent="Course" index="12"]
+[node name="Floor" type="StaticBody" parent="Course" index="12"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.000202358, 0 )
 
-[node name="CollisionShape" type="CollisionShape" parent="Course/StaticBody" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0535829, -2.49717 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape5" type="CollisionShape" parent="Course/StaticBody" index="1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0535829, -5.89021 )
-shape = SubResource( 5 )
-
-[node name="CollisionShape2" type="CollisionShape" parent="Course/StaticBody" index="2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0535829, 0.53993 )
-shape = SubResource( 3 )
-
-[node name="CollisionShape3" type="CollisionShape" parent="Course/StaticBody" index="3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.60478, 0.0535829, -0.994457 )
-shape = SubResource( 4 )
-
-[node name="CollisionShape4" type="CollisionShape" parent="Course/StaticBody" index="4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.60477, 0.0535829, -0.994457 )
-shape = SubResource( 4 )
+[node name="CollisionPolygon" type="CollisionPolygon" parent="Course/Floor" index="0"]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, -0.0880432, 0 )
+depth = 0.429
+polygon = PoolVector2Array( 1.24998, 1.976, -1.33228, 1.98824, -1.98091, 1.65781, -2.58058, 1.07037, -2.92325, 0.152507, -2.92325, -2.33185, -2.51939, -3.20076, -1.96867, -3.67805, -0.952896, -3.95953, -0.914772, -7.93808, 0.939682, -7.91473, 0.939682, -3.97236, 1.85245, -3.7199, 2.60985, -3.09844, 2.92058, -2.22452, 2.92058, 0.358408, 2.60985, 1.09639, 1.94955, 1.679 )
+script = ExtResource( 11 )
 
 [node name="DirectionalLight" parent="." index="15" instance=ExtResource( 10 )]
 

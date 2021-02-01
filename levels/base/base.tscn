@@ -106,8 +106,8 @@ __meta__ = {
 }
 [connection signal="input_mode_changed" from="Player" to="InputMode" method="_on_Player_input_mode_changed"]
 [connection signal="input_mode_changed" from="Player" to="." method="_on_Player_input_mode_changed"]
-[connection signal="ball_hit" from="Club" to="ShotCounter" method="increment"]
 [connection signal="ball_hit" from="Club" to="." method="_on_Club_ball_hit"]
+[connection signal="ball_hit" from="Club" to="ShotCounter" method="increment"]
 [connection signal="reset" from="Club" to="PowerBar" method="reset"]
 [connection signal="reset" from="Club" to="StarRequirements" method="_on_club_reset"]
 [connection signal="ball_stopped" from="Ball" to="Club" method="_on_ball_stopped"]

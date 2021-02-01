@@ -30,3 +30,9 @@ func _on_HoleArea_body_exited(body):
 
 func _on_FinishTimer_timeout():
     emit_signal("level_finished")
+
+func _on_HoleDropArea_body_entered(body):
+    body.collision_mask = 8
+
+func _on_HoleDropArea_body_exited(body):
+    body.collision_mask = 9
