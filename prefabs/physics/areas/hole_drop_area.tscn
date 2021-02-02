@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="CylinderShape" id=1]
+radius = 0.126917
+height = 0.398263
+
+[node name="HoleDropArea" type="Area"]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00219129, 0.18934, -0.000820272 )
+shape = SubResource( 1 )

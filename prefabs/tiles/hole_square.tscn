@@ -3,23 +3,20 @@
 [ext_resource path="res://models/holeSquare.glb" type="PackedScene" id=1]
 [ext_resource path="res://scripts/hole_tile.gd" type="Script" id=2]
 [ext_resource path="res://models/flag_red.glb" type="PackedScene" id=3]
+[ext_resource path="res://prefabs/physics/bodies/hole.tscn" type="PackedScene" id=4]
+[ext_resource path="res://prefabs/physics/areas/hole_drop_area.tscn" type="PackedScene" id=5]
+[ext_resource path="res://prefabs/physics/bodies/end_walls.tscn" type="PackedScene" id=6]
+
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.144, 0.043, 0.144 )
 
-[sub_resource type="BoxShape" id=2]
-extents = Vector3( 0.159468, 0.02353, 0.18793 )
-
-[sub_resource type="BoxShape" id=3]
-extents = Vector3( 0.0678649, 0.02353, 0.18793 )
-
-[sub_resource type="BoxShape" id=4]
-extents = Vector3( 0.0999063, 0.145075, 1 )
-
 [node name="HoleSquare" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
-[node name="HoleArea" type="Area" parent="." index="0"]
+[node name="EndWalls" parent="." index="0" instance=ExtResource( 6 )]
+
+[node name="HoleArea" type="Area" parent="." index="1"]
 collision_layer = 4
 collision_mask = 2
 
@@ -27,57 +24,13 @@ collision_mask = 2
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.054, 0 )
 shape = SubResource( 1 )
 
-[node name="flag_red" parent="." index="1" instance=ExtResource( 3 )]
+[node name="flag_red" parent="." index="2" instance=ExtResource( 3 )]
+
+[node name="HoleDropArea" parent="." index="3" instance=ExtResource( 5 )]
+
+[node name="InnerHoleBody" parent="." index="4" instance=ExtResource( 4 )]
 
 [node name="holeSquare" parent="tmpParent" index="0"]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
-
-[node name="StaticBody" type="StaticBody" parent="." index="3"]
-
-[node name="HoleShape" type="CollisionShape" parent="StaticBody" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0453371, 0 )
-shape = SubResource( 2 )
-
-[node name="HoleShape2" type="CollisionShape" parent="StaticBody" index="1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.186867, 0.0962131, -0.0232167 )
-shape = SubResource( 3 )
-
-[node name="HoleShape3" type="CollisionShape" parent="StaticBody" index="2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.190367, 0.0962131, 0 )
-shape = SubResource( 3 )
-
-[node name="HoleShape4" type="CollisionShape" parent="StaticBody" index="3"]
-transform = Transform( 0.66373, 0, 0.747972, 0, 1, 0, -0.747972, 0, 0.66373, -0.0678754, 0.0962131, 0.195068 )
-shape = SubResource( 3 )
-
-[node name="HoleShape9" type="CollisionShape" parent="StaticBody" index="4"]
-transform = Transform( 0.66373, 0, 0.747972, 0, 1, 0, -0.747972, 0, 0.66373, 0.0786547, 0.0962131, -0.190196 )
-shape = SubResource( 3 )
-
-[node name="HoleShape5" type="CollisionShape" parent="StaticBody" index="5"]
-transform = Transform( -0.708894, 0, 0.705315, 0, 1, 0, -0.705315, 0, -0.708894, 0.162087, 0.0962131, 0.107465 )
-shape = SubResource( 3 )
-
-[node name="HoleShape8" type="CollisionShape" parent="StaticBody" index="6"]
-transform = Transform( -0.708894, 0, 0.705315, 0, 1, 0, -0.705315, 0, -0.708894, -0.200737, 0.0962131, -0.074427 )
-shape = SubResource( 3 )
-
-[node name="HoleShape6" type="CollisionShape" parent="StaticBody" index="7"]
-transform = Transform( -0.0633653, 0, 0.99799, 0, 1, 0, -0.99799, 0, -0.0633653, 0.0362318, 0.0962131, 0.188261 )
-shape = SubResource( 3 )
-
-[node name="HoleShape7" type="CollisionShape" parent="StaticBody" index="8"]
-transform = Transform( -0.0633653, 0, 0.99799, 0, 1, 0, -0.99799, 0, -0.0633653, 0.0362318, 0.0962131, -0.192984 )
-shape = SubResource( 3 )
-
-[node name="WallShape" type="CollisionShape" parent="StaticBody" index="9"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.899542, 0.147351, 0 )
-shape = SubResource( 4 )
-
-[node name="WallShape3" type="CollisionShape" parent="StaticBody" index="10"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0019511, 0.147351, -0.899391 )
-shape = SubResource( 4 )
-
-[node name="WallShape2" type="CollisionShape" parent="StaticBody" index="11"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.900021, 0.145595, 0 )
-shape = SubResource( 4 )
+[connection signal="body_entered" from="HoleDropArea" to="." method="_on_HoleDropArea_body_entered"]
+[connection signal="body_exited" from="HoleDropArea" to="." method="_on_HoleDropArea_body_exited"]

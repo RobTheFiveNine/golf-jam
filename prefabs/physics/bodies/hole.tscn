@@ -7,6 +7,7 @@ extents = Vector3( 0.159468, 0.02353, 0.18793 )
 extents = Vector3( 0.0678649, 0.02353, 0.18793 )
 
 [node name="InnerHoleBody" type="StaticBody"]
+collision_layer = 9
 
 [node name="Bottom" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0453371, 0 )
