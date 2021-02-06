@@ -128,6 +128,7 @@ common/physics_fps=120
 
 [rendering]
 
+quality/directional_shadow/size=6144
 quality/shadows/filter_mode=2
 quality/filters/msaa=4
 environment/default_environment="res://default_env.tres"

@@ -29,6 +29,7 @@ transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
 [node name="HoleDropArea" parent="." index="3" instance=ExtResource( 5 )]
 
 [node name="InnerHoleBody" parent="." index="4" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="tmpParent" parent="." index="5"]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
