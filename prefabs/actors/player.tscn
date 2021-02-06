@@ -2,10 +2,10 @@
 
 [ext_resource path="res://levels/base/scripts/player.gd" type="Script" id=1]
 
-
 [node name="Player" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 script = ExtResource( 1 )
+move_speed = 40.0
 
 [node name="Camera_Container" type="Spatial" parent="."]
 
@@ -13,5 +13,6 @@ script = ExtResource( 1 )
 
 [node name="Camera" type="Camera" parent="Camera_Container/Rotation_Helper"]
 keep_aspect = 0
+far = 1000.0
 
 [node name="ZoomTween" type="Tween" parent="."]

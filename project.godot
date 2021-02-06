@@ -121,6 +121,10 @@ toggle_input_mode={
 3d_physics/layer_4="Holes"
 3d_physics/layer_5="HoleDropArea"
 
+[physics]
+
+3d/default_gravity=45.0
+
 [rendering]
 
 quality/directional_shadow/size=8192

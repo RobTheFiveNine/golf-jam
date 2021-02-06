@@ -49,7 +49,7 @@ script = ExtResource( 10 )
 environment = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.254, 4.685, -8.901 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.606, 23.634, -24.036 )
 
 [node name="Camera_Container" parent="Player" index="0"]
 transform = Transform( -0.627243, 0, -0.778824, 0, 1, 0, 0.778824, 0, -0.627243, 0, 0, 0 )
@@ -61,11 +61,11 @@ transform = Transform( 1, 0, 0, 0, 0.806362, 0.591422, 0, -0.591422, 0.806362, 0
 fov = 80.6
 
 [node name="Club" parent="." instance=ExtResource( 9 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.131209, 3.55406, -7.34507 )
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 12.478, 0 )
 ball_path = NodePath("../Ball")
 
 [node name="Ball" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0173099, 0.206409, -7.0222 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.984, 0 )
 out_of_bounds_path = NodePath("../OutOfBounds")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -82,7 +82,7 @@ anims/FadeIn = SubResource( 2 )
 [node name="ShotCounter" parent="." instance=ExtResource( 11 )]
 
 [node name="OutOfBounds" type="CSGMesh" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.04675, -8.47376, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.047, -28.162, 0 )
 mesh = SubResource( 4 )
 
 [node name="LevelCompleteOverlay" parent="." instance=ExtResource( 8 )]
@@ -106,8 +106,8 @@ __meta__ = {
 }
 [connection signal="input_mode_changed" from="Player" to="InputMode" method="_on_Player_input_mode_changed"]
 [connection signal="input_mode_changed" from="Player" to="." method="_on_Player_input_mode_changed"]
-[connection signal="ball_hit" from="Club" to="." method="_on_Club_ball_hit"]
 [connection signal="ball_hit" from="Club" to="ShotCounter" method="increment"]
+[connection signal="ball_hit" from="Club" to="." method="_on_Club_ball_hit"]
 [connection signal="reset" from="Club" to="PowerBar" method="reset"]
 [connection signal="reset" from="Club" to="StarRequirements" method="_on_club_reset"]
 [connection signal="ball_stopped" from="Ball" to="Club" method="_on_ball_stopped"]

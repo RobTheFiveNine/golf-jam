@@ -2,7 +2,7 @@ extends Spatial
 
 export (NodePath) var ball_path
 export (float) var aim_speed = 2.4
-export (float) var max_power = 10
+export (float) var max_power = 60
 
 signal reset
 signal ball_hit
@@ -23,7 +23,8 @@ var power_modifier : float = 0
 
 func reset_position():
     var offset = Vector3(0.15, 2.3, -0.1)
-    
+    offset *= 5.0
+
     transform.origin = ball.global_transform.origin
     mesh.transform.origin = offset
     aim_cast.global_transform.origin = ball.global_transform.origin

@@ -5,17 +5,17 @@
 [ext_resource path="res://levels/base/scripts/follow_node.gd" type="Script" id=3]
 
 [sub_resource type="PhysicsMaterial" id=1]
-bounce = 0.5
+bounce = 0.7
 
 [sub_resource type="SphereShape" id=2]
-radius = 0.07
+radius = 0.35
 
 [node name="Ball" type="Spatial"]
 script = ExtResource( 2 )
 
 [node name="RayCast" type="RayCast" parent="."]
 enabled = true
-cast_to = Vector3( 0, -0.1, 0 )
+cast_to = Vector3( 0, -0.5, 0 )
 script = ExtResource( 3 )
 target_path = NodePath("../../Ball/RigidBody")
 
@@ -25,13 +25,13 @@ collision_mask = 9
 physics_material_override = SubResource( 1 )
 continuous_cd = true
 linear_damp = 0.5
-angular_damp = 1.5
+angular_damp = 5.0
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Mesh" parent="RigidBody" instance=ExtResource( 1 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
 shape = SubResource( 2 )

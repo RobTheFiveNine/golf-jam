@@ -8,4 +8,4 @@
 [node name="StraightWallsBody" parent="." index="0" instance=ExtResource( 2 )]
 
 [node name="tmpParent" parent="." index="1"]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
