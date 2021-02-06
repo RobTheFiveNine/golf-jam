@@ -25,7 +25,7 @@ collision_mask = 9
 physics_material_override = SubResource( 1 )
 continuous_cd = true
 linear_damp = 0.5
-angular_damp = 5.0
+angular_damp = 2.5
 __meta__ = {
 "_edit_group_": true
 }
