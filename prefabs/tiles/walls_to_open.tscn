@@ -1,22 +1,20 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://models/wallsToOpen.glb" type="PackedScene" id=1]
-
-[sub_resource type="CylinderShape" id=1]
-radius = 0.200411
-height = 0.296366
 
 [node name="wallsToOpen" instance=ExtResource( 1 )]
 
 [node name="StaticBody" type="StaticBody" parent="." index="0"]
 
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00124, 0.145975, 1.00195 )
-shape = SubResource( 1 )
+[node name="CollisionPolygon" type="CollisionPolygon" parent="StaticBody" index="0"]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 0.754666, 0 )
+depth = 1.429
+polygon = PoolVector2Array( -4.99951, -4.99955, -3.99959, -4.99978, -4.00796, -4.86919, -4.03321, -4.74255, -4.07556, -4.61703, -4.13357, -4.49939, -4.20603, -4.391, -4.29291, -4.29184, -4.39078, -4.20631, -4.49918, -4.13385, -4.61655, -4.07596, -4.73998, -4.0339, -4.86848, -4.00818, -4.99942, -3.99962 )
 
-[node name="CollisionShape2" type="CollisionShape" parent="StaticBody" index="1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.999464, 0.145975, 1.00195 )
-shape = SubResource( 1 )
+[node name="CollisionPolygon2" type="CollisionPolygon" parent="StaticBody" index="1"]
+transform = Transform( -4.37114e-08, -1, -1.62921e-07, 0, -1.62921e-07, 1, -1, 4.37114e-08, 7.12149e-15, -0.00198746, 0.754666, 0.00208879 )
+depth = 1.429
+polygon = PoolVector2Array( -4.99951, -4.99955, -3.99959, -4.99978, -4.00796, -4.86919, -4.03321, -4.74255, -4.07556, -4.61703, -4.13357, -4.49939, -4.20603, -4.391, -4.29291, -4.29184, -4.39078, -4.20631, -4.49918, -4.13385, -4.61655, -4.07596, -4.73998, -4.0339, -4.86848, -4.00818, -4.99942, -3.99962 )
 
 [node name="tmpParent" parent="." index="1"]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
