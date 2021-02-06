@@ -9,7 +9,7 @@
 [node name="StraightWallsBody" parent="." index="0" instance=ExtResource( 2 )]
 
 [node name="ObstacleWall" parent="." index="1" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24988, 0.0731817, 0.458388 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 0.365, 2.29 )
 
 [node name="tmpParent" parent="." index="2"]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
