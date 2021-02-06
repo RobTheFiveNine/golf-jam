@@ -123,6 +123,7 @@ toggle_input_mode={
 
 [physics]
 
+common/physics_fps=120
 3d/default_gravity=45.0
 
 [rendering]
