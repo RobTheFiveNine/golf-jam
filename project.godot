@@ -127,7 +127,6 @@ toggle_input_mode={
 
 [rendering]
 
-quality/directional_shadow/size=8192
 quality/shadows/filter_mode=2
-quality/filters/msaa=1
+quality/filters/msaa=4
 environment/default_environment="res://default_env.tres"
