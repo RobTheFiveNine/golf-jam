@@ -4,43 +4,43 @@
 extents = Vector3( 0.795, 0.12, 0.94 )
 
 [sub_resource type="BoxShape" id=2]
-extents = Vector3( 0.34, 0.18, 0.94 )
+extents = Vector3( 0.34, 0.279, 0.94 )
 
 [node name="InnerHoleBody" type="StaticBody"]
 collision_layer = 9
 
 [node name="Bottom" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.132, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0243356, 0 )
 shape = SubResource( 1 )
 
 [node name="Side2" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.935, 0.431, -0.115 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.935, 0.332732, -0.115 )
 shape = SubResource( 2 )
 
 [node name="Side3" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.95, 0.431, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.95, 0.332732, 0 )
 shape = SubResource( 2 )
 
 [node name="Side4" type="CollisionShape" parent="."]
-transform = Transform( 0.66373, 0, 0.747972, 0, 1, 0, -0.747972, 0, 0.66373, -0.34, 0.431, 0.975 )
+transform = Transform( 0.66373, 0, 0.747972, 0, 1, 0, -0.747972, 0, 0.66373, -0.34, 0.332732, 0.975 )
 shape = SubResource( 2 )
 
 [node name="Side9" type="CollisionShape" parent="."]
-transform = Transform( 0.66373, 0, 0.747972, 0, 1, 0, -0.747972, 0, 0.66373, 0.395, 0.431, -0.95 )
+transform = Transform( 0.66373, 0, 0.747972, 0, 1, 0, -0.747972, 0, 0.66373, 0.395, 0.332732, -0.95 )
 shape = SubResource( 2 )
 
 [node name="Side5" type="CollisionShape" parent="."]
-transform = Transform( -0.708894, 0, 0.705315, 0, 1, 0, -0.705315, 0, -0.708894, 0.81, 0.431, 0.535 )
+transform = Transform( -0.708894, 0, 0.705315, 0, 1, 0, -0.705315, 0, -0.708894, 0.81, 0.332732, 0.535 )
 shape = SubResource( 2 )
 
 [node name="Side8" type="CollisionShape" parent="."]
-transform = Transform( -0.708894, 0, 0.705315, 0, 1, 0, -0.705315, 0, -0.708894, -1.005, 0.431, -0.37 )
+transform = Transform( -0.708894, 0, 0.705315, 0, 1, 0, -0.705315, 0, -0.708894, -1.005, 0.332732, -0.37 )
 shape = SubResource( 2 )
 
 [node name="Side6" type="CollisionShape" parent="."]
-transform = Transform( -0.0633653, 0, 0.99799, 0, 1, 0, -0.99799, 0, -0.0633653, 0.18, 0.431, 0.94 )
+transform = Transform( -0.0633653, 0, 0.99799, 0, 1, 0, -0.99799, 0, -0.0633653, 0.18, 0.332732, 0.94 )
 shape = SubResource( 2 )
 
 [node name="Side7" type="CollisionShape" parent="."]
-transform = Transform( -0.0633653, 0, 0.99799, 0, 1, 0, -0.99799, 0, -0.0633653, 0.18, 0.431, -0.965 )
+transform = Transform( -0.0633653, 0, 0.99799, 0, 1, 0, -0.99799, 0, -0.0633653, 0.18, 0.332732, -0.965 )
 shape = SubResource( 2 )
