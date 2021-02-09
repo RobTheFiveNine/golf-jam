@@ -8,3 +8,4 @@ shadow_contact = 0.13
 directional_shadow_mode = 0
 directional_shadow_normal_bias = 0.05
 directional_shadow_depth_range = 1
+directional_shadow_max_distance = 150.0
