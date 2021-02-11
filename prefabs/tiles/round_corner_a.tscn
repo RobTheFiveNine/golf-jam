@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://models/roundCornerA.glb" type="PackedScene" id=1]
+[ext_resource path="res://prefabs/physics/bodies/inner_corner_round.tscn" type="PackedScene" id=2]
 
 [node name="roundCornerA" instance=ExtResource( 1 )]
 
@@ -15,10 +16,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.19573e-07, 0.733931 )
 depth = 1.477
 polygon = PoolVector2Array( -3.99975, -4.99953, -3.92295, -3.82446, -3.69456, -2.67451, -3.31586, -1.5561, -2.79609, -0.501461, -2.14149, 0.478234, -1.3643, 1.36388, -0.479192, 2.1403, 0.498551, 2.79342, 1.55599, 3.31544, 2.66994, 3.69312, 3.82358, 3.92293, 4.99956, 3.99961, 4.99943, 4.99937, 3.69411, 4.91382, 2.41089, 4.65829, 1.17156, 4.2375, -0.000809468, 3.65856, -1.08635, 2.93445, -2.07213, 2.06765, -2.93225, 1.08631, -3.65945, -0.00226945, -4.2374, -1.17442, -4.65644, -2.4092, -4.91168, -3.69152, -4.99712, -4.9984 )
 
-[node name="InnerWall" type="StaticBody" parent="." index="2"]
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 0.147215, 0 )
-
-[node name="CollisionPolygon" type="CollisionPolygon" parent="InnerWall" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.54135e-08, 0.585643 )
-depth = 1.47
-polygon = PoolVector2Array( 4.99961, -4.99977, 3.99968, -4.99958, 4.00826, -4.87055, 4.03374, -4.74062, 4.07579, -4.6168, 4.13377, -4.49952, 4.20622, -4.39071, 4.29235, -4.29254, 4.39071, -4.20626, 4.4997, -4.1336, 4.617, -4.07568, 4.7408, -4.03362, 4.86904, -4.00816, 4.99955, -3.9997 )
+[node name="InnerWall" parent="." index="2" instance=ExtResource( 2 )]
