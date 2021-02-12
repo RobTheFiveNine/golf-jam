@@ -15,6 +15,11 @@ _global_script_classes=[ {
 "path": "res://scripts/centered_offset_control.gd"
 }, {
 "base": "Spatial",
+"class": "FollowNode",
+"language": "GDScript",
+"path": "res://scripts/follow_node.gd"
+}, {
+"base": "Spatial",
 "class": "HoleTile",
 "language": "GDScript",
 "path": "res://scripts/hole_tile.gd"
@@ -36,6 +41,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "CenteredOffsetControl": "",
+"FollowNode": "",
 "HoleTile": "",
 "Level": "",
 "Player": "",

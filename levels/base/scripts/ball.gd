@@ -7,7 +7,7 @@ export (NodePath) var out_of_bounds_path
 onready var raycast : RayCast = $RayCast
 onready var rigidbody : RigidBody = $RigidBody
 onready var out_of_bounds : Node = get_node(out_of_bounds_path)
-onready var bounce_sound : AudioStreamPlayer = $AudioStreamPlayer
+onready var bounce_sound : AudioStreamPlayer = $BounceSound
 
 var last_position : Vector3
 var on_floor : bool

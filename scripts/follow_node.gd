@@ -1,5 +1,7 @@
 extends Spatial
 
+class_name FollowNode
+
 export (NodePath) var target_path
 
 onready var target_node = get_node(target_path)
