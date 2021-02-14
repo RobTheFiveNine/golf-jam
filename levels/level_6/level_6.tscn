@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://levels/base/base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://prefabs/lights/directional_light.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://prefabs/tiles/end_walls.tscn" type="PackedScene" id=8]
 [ext_resource path="res://prefabs/tiles/round_corner_a.tscn" type="PackedScene" id=9]
 [ext_resource path="res://prefabs/tiles/ramp_a.tscn" type="PackedScene" id=10]
+[ext_resource path="res://levels/level_7/level_7.tscn" type="PackedScene" id=11]
 
 [sub_resource type="GIProbeData" id=1]
 bounds = AABB( -31, -15, -37, 62, 30, 74 )
@@ -26,6 +27,7 @@ level_number = 6
 one_star_shots = 6
 two_star_shots = 4
 three_star_shots = 3
+next_scene = ExtResource( 11 )
 
 [node name="Camera" parent="Player/Camera_Container/Rotation_Helper" index="0"]
 transform = Transform( 1, -2.98023e-08, 5.96046e-08, 2.98023e-08, 1, 2.08616e-07, 2.98023e-08, 2.98023e-08, 1, 0, 0, 0 )
