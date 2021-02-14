@@ -71,5 +71,6 @@ data = SubResource( 2 )
 
 [node name="OutOfBounds" parent="." index="14"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0687386, -28.1623, 0 )
+[connection signal="reset" from="Club" to="PowerBar" method="reset"]
 
 [editable path="Player"]

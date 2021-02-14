@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://levels/base/base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://prefabs/tiles/ramp_b.tscn" type="PackedScene" id=2]
@@ -22,9 +22,6 @@ propagation = 0.7
 
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 4.41337, 0.312348, 12.9691 )
-
-[sub_resource type="BoxShape" id=3]
-extents = Vector3( 1, 30.4587, 63.8112 )
 
 [node name="LevelBase" instance=ExtResource( 1 )]
 one_star_shots = 4
@@ -99,23 +96,6 @@ polygon = PoolVector2Array( 19.7295, -10.0223, -9.50266, -10.036, -8.63077, -13.
 [node name="CollisionPolygon2" type="CollisionPolygon" parent="Course/Floor" index="2"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 0.13339, 0 )
 polygon = PoolVector2Array( -9.52929, -3.60244, -9.58633, 19.9555, 10.4218, 19.9816, 10.5651, -5.44668, 1.68969, -5.72403, 1.54757, 10.0028, -0.210771, 9.98737, -0.311027, 7.5041, -0.487798, -3.71964 )
-
-[node name="Bounds" type="StaticBody" parent="Course" index="15"]
-
-[node name="CollisionShape" type="CollisionShape" parent="Course/Bounds" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 54.3355, 0, 3.34407 )
-shape = SubResource( 3 )
-
-[node name="CollisionShape2" type="CollisionShape" parent="Course/Bounds" index="1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -66.1225, 0, 3.34407 )
-shape = SubResource( 3 )
-
-[node name="CollisionShape3" type="CollisionShape" parent="Course/Bounds" index="2"]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -5.89193, 0, 61.7852 )
-shape = SubResource( 3 )
-
-[node name="CollisionShape4" type="CollisionShape" parent="Course/Bounds" index="3"]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -5.89193, 0, -57.9838 )
-shape = SubResource( 3 )
+[connection signal="reset" from="Club" to="PowerBar" method="reset"]
 
 [editable path="Player"]

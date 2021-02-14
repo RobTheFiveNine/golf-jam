@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://ui/star_requirements/star_requirements.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ui/input_mode/input_mode.tscn" type="PackedScene" id=2]
@@ -41,6 +41,9 @@ albedo_color = Color( 0.25098, 0.184314, 0.309804, 1 )
 [sub_resource type="PlaneMesh" id=4]
 material = SubResource( 3 )
 size = Vector2( 5, 5 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 0.261505, 36.7279, 52.4063 )
 
 [node name="LevelBase" type="Spatial"]
 script = ExtResource( 10 )
@@ -104,6 +107,25 @@ color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Bounds" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 6 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Bounds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48.9204, 17.0896, -7.49063 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Bounds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -54.0948, 17.0896, -7.49063 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="Bounds"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.55566, 17.0896, 46.5094 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="Bounds"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.55566, 17.0896, -59.4906 )
+shape = SubResource( 5 )
 [connection signal="input_mode_changed" from="Player" to="InputMode" method="_on_Player_input_mode_changed"]
 [connection signal="input_mode_changed" from="Player" to="." method="_on_Player_input_mode_changed"]
 [connection signal="ball_hit" from="Club" to="ShotCounter" method="increment"]
