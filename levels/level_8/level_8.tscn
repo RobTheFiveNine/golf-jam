@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://levels/base/base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://prefabs/tiles/ramp_b.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://prefabs/tiles/hole_open.tscn" type="PackedScene" id=7]
 [ext_resource path="res://prefabs/tiles/open.tscn" type="PackedScene" id=8]
 [ext_resource path="res://prefabs/lights/directional_light.tscn" type="PackedScene" id=9]
+[ext_resource path="res://levels/level_9/level_9.tscn" type="PackedScene" id=10]
 
 [sub_resource type="GIProbeData" id=1]
 bounds = AABB( -33, -18, -34, 66, 36, 68 )
@@ -27,6 +28,7 @@ extents = Vector3( 4.41337, 0.312348, 12.9691 )
 one_star_shots = 4
 two_star_shots = 3
 three_star_shots = 2
+next_scene = ExtResource( 10 )
 
 [node name="Ball" parent="." index="3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0.984, -18 )
