@@ -112,6 +112,5 @@ light_energy = 2.68
 shadow_enabled = true
 spot_range = 33.0
 spot_angle = 55.0779
-[connection signal="reset" from="Club" to="PowerBar" method="reset"]
 
 [editable path="Player"]
