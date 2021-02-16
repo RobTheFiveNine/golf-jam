@@ -8,9 +8,10 @@
 [ext_resource path="res://prefabs/tiles/obstacle_diamond.tscn" type="PackedScene" id=6]
 [ext_resource path="res://prefabs/tiles/hole_open.tscn" type="PackedScene" id=7]
 [ext_resource path="res://prefabs/tiles/side.tscn" type="PackedScene" id=8]
-[ext_resource path="res://levels/level_3/level_3.tscn" type="PackedScene" id=9]
+[ext_resource path="res://levels/level_03/level_3.tscn" type="PackedScene" id=9]
 [ext_resource path="res://prefabs/lights/directional_light.tscn" type="PackedScene" id=10]
 [ext_resource path="res://prefabs/lights/cool_spot_light.tscn" type="PackedScene" id=11]
+
 
 [sub_resource type="GIProbeData" id=1]
 bounds = AABB( -25, -10, -33, 50, 20, 66 )

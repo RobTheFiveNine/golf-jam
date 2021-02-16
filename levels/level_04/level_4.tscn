@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://levels/base/base.tscn" type="PackedScene" id=1]
-[ext_resource path="res://prefabs/lights/directional_light.tscn" type="PackedScene" id=2]
-[ext_resource path="res://prefabs/tiles/corner.tscn" type="PackedScene" id=3]
-[ext_resource path="res://prefabs/tiles/round_corner_a.tscn" type="PackedScene" id=4]
-[ext_resource path="res://prefabs/tiles/straight_walls.tscn" type="PackedScene" id=5]
-[ext_resource path="res://prefabs/tiles/hole_square.tscn" type="PackedScene" id=6]
-[ext_resource path="res://levels/level_5/level_5.tscn" type="PackedScene" id=7]
+[ext_resource path="res://prefabs/tiles/straight_walls.tscn" type="PackedScene" id=2]
+[ext_resource path="res://prefabs/tiles/round_corner_a.tscn" type="PackedScene" id=3]
+[ext_resource path="res://prefabs/tiles/hole_square.tscn" type="PackedScene" id=4]
+[ext_resource path="res://prefabs/lights/directional_light.tscn" type="PackedScene" id=5]
+[ext_resource path="res://prefabs/tiles/corner.tscn" type="PackedScene" id=6]
+[ext_resource path="res://levels/level_05/level_5.tscn" type="PackedScene" id=7]
 [ext_resource path="res://prefabs/lights/cool_spot_light.tscn" type="PackedScene" id=8]
 
 [sub_resource type="GIProbeData" id=1]
@@ -44,31 +44,31 @@ transform = Transform( 0.867852, -0.496822, 1.66808e-07, 0.377499, 0.659418, 0.6
 spot_range = 40.5563
 spot_angle = 51.8839
 
-[node name="DirectionalLight" parent="Course" index="2" instance=ExtResource( 2 )]
+[node name="DirectionalLight" parent="Course" index="2" instance=ExtResource( 5 )]
 transform = Transform( -0.266457, -0.662825, 0.699759, 0.0669873, 0.711516, 0.699469, -0.961516, 0.233253, -0.145188, 7.92817, 14, -1.77355 )
 
-[node name="Hole" parent="Course" index="3" instance=ExtResource( 6 )]
+[node name="Hole" parent="Course" index="3" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -5 )
 
-[node name="StraightWalls" parent="Course" index="4" instance=ExtResource( 5 )]
+[node name="StraightWalls" parent="Course" index="4" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5 )
 
-[node name="StraightWalls2" parent="Course" index="5" instance=ExtResource( 5 )]
+[node name="StraightWalls2" parent="Course" index="5" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 5 )
 
-[node name="StraightWalls3" parent="Course" index="6" instance=ExtResource( 5 )]
+[node name="StraightWalls3" parent="Course" index="6" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 5 )
 
-[node name="roundCornerA" parent="Course" index="7" instance=ExtResource( 4 )]
+[node name="roundCornerA" parent="Course" index="7" instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -15, 0, 15 )
 
-[node name="roundCornerA2" parent="Course" index="8" instance=ExtResource( 4 )]
+[node name="roundCornerA2" parent="Course" index="8" instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, -5, 0, 15 )
 
-[node name="corner" parent="Course" index="9" instance=ExtResource( 3 )]
+[node name="corner" parent="Course" index="9" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -15 )
 
-[node name="corner2" parent="Course" index="10" instance=ExtResource( 3 )]
+[node name="corner2" parent="Course" index="10" instance=ExtResource( 6 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5, 0, -15 )
 
 [node name="GIProbe" type="GIProbe" parent="Course" index="11"]

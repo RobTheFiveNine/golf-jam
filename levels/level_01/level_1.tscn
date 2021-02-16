@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://levels/base/base.tscn" type="PackedScene" id=1]
-[ext_resource path="res://prefabs/tiles/straight_walls.tscn" type="PackedScene" id=2]
-[ext_resource path="res://ui/input_tutorial/input_tutorial.tscn" type="PackedScene" id=3]
+[ext_resource path="res://prefabs/tiles/end_walls.tscn" type="PackedScene" id=1]
+[ext_resource path="res://levels/base/base.tscn" type="PackedScene" id=2]
+[ext_resource path="res://prefabs/tiles/straight_walls.tscn" type="PackedScene" id=3]
 [ext_resource path="res://prefabs/tiles/hole_square.tscn" type="PackedScene" id=4]
-[ext_resource path="res://prefabs/tiles/end_walls.tscn" type="PackedScene" id=5]
-[ext_resource path="res://levels/level_2/level_2.tscn" type="PackedScene" id=6]
-[ext_resource path="res://prefabs/lights/directional_light.tscn" type="PackedScene" id=7]
-[ext_resource path="res://prefabs/lights/cool_spot_light.tscn" type="PackedScene" id=8]
+[ext_resource path="res://prefabs/lights/directional_light.tscn" type="PackedScene" id=5]
+[ext_resource path="res://levels/level_02/level_2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://prefabs/lights/cool_spot_light.tscn" type="PackedScene" id=7]
+[ext_resource path="res://ui/input_tutorial/input_tutorial.tscn" type="PackedScene" id=8]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 5.005, 0.62, 19.63 )
@@ -22,7 +22,7 @@ bias = 1.5
 normal_bias = 0.0
 propagation = 0.7
 
-[node name="LevelBase" instance=ExtResource( 1 )]
+[node name="LevelBase" instance=ExtResource( 2 )]
 level_number = 1
 one_star_shots = 3
 two_star_shots = 2
@@ -41,18 +41,18 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0253463, 0.984166, -14.8818
 [node name="Course" type="Spatial" parent="." index="6"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4 )
 
-[node name="CoolSpotLight" parent="Course" index="0" instance=ExtResource( 8 )]
+[node name="CoolSpotLight" parent="Course" index="0" instance=ExtResource( 7 )]
 transform = Transform( 0.902698, -0.430274, -3.76855e-09, 0.331508, 0.695491, 0.637491, -0.274296, -0.575462, 0.770458, -1.71148, 32.1108, 30.4399 )
 spot_range = 74.9954
 spot_angle = 38.4621
 
-[node name="StraightWalls2" parent="Course" index="1" instance=ExtResource( 2 )]
+[node name="StraightWalls2" parent="Course" index="1" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -9 )
 
-[node name="StraightWalls3" parent="Course" index="2" instance=ExtResource( 2 )]
+[node name="StraightWalls3" parent="Course" index="2" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1 )
 
-[node name="EndWalls" parent="Course" index="3" instance=ExtResource( 5 )]
+[node name="EndWalls" parent="Course" index="3" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.002, 0, -19 )
 
 [node name="Hole" parent="Course" index="4" instance=ExtResource( 4 )]
@@ -64,7 +64,7 @@ transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -2, 0, 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.00269, 0.0127642, -4.02259 )
 shape = SubResource( 1 )
 
-[node name="DirectionalLight" parent="." index="7" instance=ExtResource( 7 )]
+[node name="DirectionalLight" parent="." index="7" instance=ExtResource( 5 )]
 transform = Transform( 0.448835, -0.647596, 0.615765, 0.0669873, 0.711516, 0.69947, -0.8911, -0.272698, 0.362734, 0.13, 11.822, 10.1591 )
 
 [node name="GIProbe" type="GIProbe" parent="." index="8"]
@@ -73,7 +73,7 @@ subdiv = 0
 extents = Vector3( 15, 9, 29 )
 data = SubResource( 2 )
 
-[node name="TutorialOverlay" parent="." index="9" instance=ExtResource( 3 )]
+[node name="TutorialOverlay" parent="." index="9" instance=ExtResource( 8 )]
 
 [node name="OutOfBounds" parent="." index="14"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0687386, -28.1623, 0 )

@@ -1,16 +1,16 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://levels/base/base.tscn" type="PackedScene" id=1]
-[ext_resource path="res://prefabs/lights/directional_light.tscn" type="PackedScene" id=2]
-[ext_resource path="res://prefabs/tiles/round_corner_c.tscn" type="PackedScene" id=3]
-[ext_resource path="res://prefabs/tiles/hole_round.tscn" type="PackedScene" id=4]
+[ext_resource path="res://prefabs/tiles/end_walls.tscn" type="PackedScene" id=1]
+[ext_resource path="res://levels/base/base.tscn" type="PackedScene" id=2]
+[ext_resource path="res://prefabs/tiles/round_corner_a.tscn" type="PackedScene" id=3]
+[ext_resource path="res://prefabs/tiles/round_corner_c.tscn" type="PackedScene" id=4]
 [ext_resource path="res://prefabs/tiles/side.tscn" type="PackedScene" id=5]
-[ext_resource path="res://prefabs/tiles/hill_round.tscn" type="PackedScene" id=6]
-[ext_resource path="res://prefabs/tiles/inner_corner.tscn" type="PackedScene" id=7]
-[ext_resource path="res://prefabs/tiles/end_walls.tscn" type="PackedScene" id=8]
-[ext_resource path="res://prefabs/tiles/round_corner_a.tscn" type="PackedScene" id=9]
+[ext_resource path="res://prefabs/lights/directional_light.tscn" type="PackedScene" id=6]
+[ext_resource path="res://prefabs/tiles/hole_round.tscn" type="PackedScene" id=7]
+[ext_resource path="res://prefabs/tiles/hill_round.tscn" type="PackedScene" id=8]
+[ext_resource path="res://prefabs/tiles/inner_corner.tscn" type="PackedScene" id=9]
 [ext_resource path="res://prefabs/tiles/ramp_a.tscn" type="PackedScene" id=10]
-[ext_resource path="res://levels/level_7/level_7.tscn" type="PackedScene" id=11]
+[ext_resource path="res://levels/level_07/level_7.tscn" type="PackedScene" id=11]
 [ext_resource path="res://prefabs/lights/cool_spot_light.tscn" type="PackedScene" id=12]
 
 [sub_resource type="GIProbeData" id=1]
@@ -23,7 +23,7 @@ bias = 1.5
 normal_bias = 0.0
 propagation = 0.7
 
-[node name="LevelBase" instance=ExtResource( 1 )]
+[node name="LevelBase" instance=ExtResource( 2 )]
 level_number = 6
 one_star_shots = 6
 two_star_shots = 4
@@ -39,43 +39,43 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1.10454, -16 )
 [node name="Course" type="Spatial" parent="." index="14"]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 0, -14 )
 
-[node name="EndWalls" parent="Course" index="0" instance=ExtResource( 8 )]
+[node name="EndWalls" parent="Course" index="0" instance=ExtResource( 1 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 25.0171, -6, -27.8169 )
 
 [node name="rampA" parent="Course" index="1" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, -5 )
 
-[node name="Hole" parent="Course" index="2" instance=ExtResource( 4 )]
+[node name="Hole" parent="Course" index="2" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25, -6, -34 )
 
-[node name="roundCornerA" parent="Course" index="3" instance=ExtResource( 9 )]
+[node name="roundCornerA" parent="Course" index="3" instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 25, 0, 5 )
 
 [node name="side" parent="Course" index="4" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 5 )
 
-[node name="innerCorner" parent="Course" index="5" instance=ExtResource( 7 )]
+[node name="innerCorner" parent="Course" index="5" instance=ExtResource( 9 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5, 0, 5 )
 
-[node name="innerCorner2" parent="Course" index="6" instance=ExtResource( 7 )]
+[node name="innerCorner2" parent="Course" index="6" instance=ExtResource( 9 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5, 0, 5 )
 
-[node name="hillRound" parent="Course" index="7" instance=ExtResource( 6 )]
+[node name="hillRound" parent="Course" index="7" instance=ExtResource( 8 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15, 0, 5 )
 
-[node name="roundCornerC" parent="Course" index="8" instance=ExtResource( 3 )]
+[node name="roundCornerC" parent="Course" index="8" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5 )
 
-[node name="roundCornerC3" parent="Course" index="9" instance=ExtResource( 3 )]
+[node name="roundCornerC3" parent="Course" index="9" instance=ExtResource( 4 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 0, -5 )
 
-[node name="roundCornerC4" parent="Course" index="10" instance=ExtResource( 3 )]
+[node name="roundCornerC4" parent="Course" index="10" instance=ExtResource( 4 )]
 transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 5, 0, 15 )
 
-[node name="roundCornerC2" parent="Course" index="11" instance=ExtResource( 3 )]
+[node name="roundCornerC2" parent="Course" index="11" instance=ExtResource( 4 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 0, 15 )
 
-[node name="DirectionalLight" parent="Course" index="12" instance=ExtResource( 2 )]
+[node name="DirectionalLight" parent="Course" index="12" instance=ExtResource( 6 )]
 transform = Transform( -0.965926, -0.129409, 0.224143, 0.0669873, 0.711516, 0.699469, -0.249999, 0.69065, -0.678603, 4, 4, -2.00001 )
 
 [node name="CoolSpotLight" parent="Course" index="13" instance=ExtResource( 12 )]
