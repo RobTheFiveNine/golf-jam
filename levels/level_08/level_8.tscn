@@ -26,6 +26,7 @@ propagation = 0.7
 extents = Vector3( 4.41337, 0.312348, 12.9691 )
 
 [node name="LevelBase" instance=ExtResource( 2 )]
+level_number = 8
 one_star_shots = 4
 two_star_shots = 3
 three_star_shots = 2

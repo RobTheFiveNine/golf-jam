@@ -26,6 +26,7 @@ normal_bias = 0.0
 propagation = 0.7
 
 [node name="LevelBase" instance=ExtResource( 2 )]
+level_number = 9
 one_star_shots = 5
 two_star_shots = 3
 three_star_shots = 2
