@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://prefabs/tiles/end_walls.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/base/base.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://prefabs/tiles/castle.tscn" type="PackedScene" id=9]
 [ext_resource path="res://prefabs/tiles/gap.tscn" type="PackedScene" id=10]
 [ext_resource path="res://prefabs/lights/cool_spot_light.tscn" type="PackedScene" id=11]
+[ext_resource path="res://levels/level_10/level_10.tscn" type="PackedScene" id=12]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 4.07691, 0.423471, 4.79084 )
@@ -30,6 +31,7 @@ level_number = 9
 one_star_shots = 5
 two_star_shots = 3
 three_star_shots = 2
+next_scene = ExtResource( 12 )
 
 [node name="Club" parent="." index="2"]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 14.478, -25 )

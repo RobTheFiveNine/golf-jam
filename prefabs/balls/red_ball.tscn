@@ -28,7 +28,7 @@ volume_db = -22.374
 
 [node name="RigidBody" type="RigidBody" parent="."]
 collision_layer = 2
-collision_mask = 9
+collision_mask = 73
 physics_material_override = SubResource( 1 )
 continuous_cd = true
 linear_damp = 0.5
