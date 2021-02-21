@@ -1,0 +1,149 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://models/green.material" type="Material" id=1]
+[ext_resource path="res://prefabs/tiles/block.tscn" type="PackedScene" id=2]
+[ext_resource path="res://prefabs/tiles/moving_platform/scripts/moving_platform.gd" type="Script" id=3]
+
+[sub_resource type="ArrayMesh" id=1]
+resource_name = "open"
+surfaces/0 = {
+"aabb": AABB( -0.49995, 0, -0.49995, 0.9999, 0.063327, 0.9999 ),
+"array_data": PoolByteArray( 114, 249, 255, 190, 0, 0, 0, 0, 114, 249, 255, 190, 0, 0, 129, 0, 129, 0, 0, 127, 235, 76, 0, 60, 114, 249, 255, 62, 0, 0, 0, 0, 114, 249, 255, 190, 0, 0, 129, 0, 129, 0, 0, 127, 235, 204, 0, 60, 114, 249, 255, 190, 150, 177, 129, 61, 114, 249, 255, 190, 0, 0, 129, 0, 129, 0, 0, 127, 235, 76, 249, 189, 114, 249, 255, 62, 150, 177, 129, 61, 114, 249, 255, 190, 0, 0, 129, 0, 129, 0, 0, 127, 235, 204, 249, 189, 114, 249, 255, 190, 0, 0, 0, 0, 114, 249, 255, 62, 0, 129, 0, 0, 129, 0, 0, 127, 235, 76, 43, 77, 114, 249, 255, 62, 0, 0, 0, 0, 114, 249, 255, 62, 0, 129, 0, 0, 129, 0, 0, 127, 235, 204, 43, 77, 114, 249, 255, 190, 0, 0, 0, 0, 114, 249, 255, 190, 0, 129, 0, 0, 129, 0, 0, 127, 235, 76, 171, 204, 114, 249, 255, 62, 0, 0, 0, 0, 114, 249, 255, 190, 0, 129, 0, 0, 129, 0, 0, 127, 235, 204, 171, 204, 114, 249, 255, 190, 150, 177, 129, 61, 114, 249, 255, 62, 0, 127, 0, 0, 127, 0, 0, 127, 235, 204, 43, 77, 114, 249, 255, 190, 150, 177, 129, 61, 114, 249, 255, 190, 0, 127, 0, 0, 127, 0, 0, 127, 235, 204, 171, 204, 114, 249, 255, 62, 150, 177, 129, 61, 114, 249, 255, 62, 0, 127, 0, 0, 127, 0, 0, 127, 235, 76, 43, 77, 114, 249, 255, 62, 150, 177, 129, 61, 114, 249, 255, 190, 0, 127, 0, 0, 127, 0, 0, 127, 235, 76, 171, 204, 114, 249, 255, 190, 150, 177, 129, 61, 114, 249, 255, 62, 129, 0, 0, 0, 0, 0, 127, 127, 235, 76, 249, 189, 114, 249, 255, 190, 0, 0, 0, 0, 114, 249, 255, 62, 129, 0, 0, 0, 0, 0, 127, 127, 235, 76, 0, 60, 114, 249, 255, 190, 150, 177, 129, 61, 114, 249, 255, 190, 129, 0, 0, 0, 0, 0, 127, 127, 235, 204, 249, 189, 114, 249, 255, 190, 0, 0, 0, 0, 114, 249, 255, 190, 129, 0, 0, 0, 0, 0, 127, 127, 235, 204, 0, 60, 114, 249, 255, 62, 0, 0, 0, 0, 114, 249, 255, 62, 127, 0, 0, 0, 0, 0, 129, 127, 235, 204, 0, 60, 114, 249, 255, 62, 150, 177, 129, 61, 114, 249, 255, 62, 127, 0, 0, 0, 0, 0, 129, 127, 235, 204, 249, 189, 114, 249, 255, 62, 0, 0, 0, 0, 114, 249, 255, 190, 127, 0, 0, 0, 0, 0, 129, 127, 235, 76, 0, 60, 114, 249, 255, 62, 150, 177, 129, 61, 114, 249, 255, 190, 127, 0, 0, 0, 0, 0, 129, 127, 235, 76, 249, 189, 114, 249, 255, 62, 0, 0, 0, 0, 114, 249, 255, 62, 0, 0, 127, 0, 127, 0, 0, 127, 235, 76, 0, 60, 114, 249, 255, 190, 0, 0, 0, 0, 114, 249, 255, 62, 0, 0, 127, 0, 127, 0, 0, 127, 235, 204, 0, 60, 114, 249, 255, 62, 150, 177, 129, 61, 114, 249, 255, 62, 0, 0, 127, 0, 127, 0, 0, 127, 235, 76, 249, 189, 114, 249, 255, 190, 150, 177, 129, 61, 114, 249, 255, 62, 0, 0, 127, 0, 127, 0, 0, 127, 235, 204, 249, 189 ),
+"array_index_data": PoolByteArray( 2, 0, 0, 0, 1, 0, 1, 0, 3, 0, 2, 0, 6, 0, 4, 0, 5, 0, 5, 0, 7, 0, 6, 0, 10, 0, 8, 0, 9, 0, 9, 0, 11, 0, 10, 0, 14, 0, 12, 0, 13, 0, 13, 0, 15, 0, 14, 0, 18, 0, 16, 0, 17, 0, 17, 0, 19, 0, 18, 0, 22, 0, 20, 0, 21, 0, 21, 0, 23, 0, 22, 0 ),
+"blend_shape_data": [  ],
+"format": 97559,
+"index_count": 36,
+"material": ExtResource( 1 ),
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 24
+}
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 5, 0.274, 5 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.267057, 0.313839, 2.45774 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "open"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("block:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -4, 0, 0 ), Vector3( -5.25564, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("block:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.054, 0.422, 0.152 ), Vector3( 0.054, 0.422, 0.152 ), Vector3( 0.054, 0.422, 1 ), Vector3( 0.054, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("block2:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.054, 0.422, 0.152 ), Vector3( 0.054, 0.422, 0.152 ), Vector3( 0.054, 0.422, 1 ), Vector3( 0.054, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("block2:translation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 4, 0, 0 ), Vector3( 5.256, 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KinematicBody/block_shape_1:shape:extents")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.267095, 0.313733, 0.762226 ), Vector3( 0.267095, 0.313733, 0.762226 ), Vector3( 0.267, 0.314, 5.001 ), Vector3( 0.267, 0.727, 5.001 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("KinematicBody/block_shape_1:translation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -4.00114, 0.306862, 0 ), Vector3( -5.26099, 0.306862, 0 ), Vector3( -5.26099, 0.306862, 0 ), Vector3( -5.26099, 0.739704, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("KinematicBody/block_shape_2:translation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 4.001, 0.307, 0 ), Vector3( 5.256, 0.307, 0 ), Vector3( 5.256, 0.307, 0 ), Vector3( 5.256, 0.74, 0 ) ]
+}
+
+[node name="MovingPlatform" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10 )
+script = ExtResource( 3 )
+
+[node name="block" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.054, 0, 0, 0, 0.422, 0, 0, 0, 0.4912, -5.25564, 0, 0 )
+
+[node name="block2" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.054, 0, -7.41691e-08, 0, 0.422, 0, 8.15377e-09, 0, -0.4912, 5.256, 0, 0 )
+
+[node name="tmpParent" type="Spatial" parent="."]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
+
+[node name="open" type="MeshInstance" parent="tmpParent"]
+use_in_baked_light = true
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="KinematicBody" type="KinematicBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.359, 0 )
+shape = SubResource( 2 )
+
+[node name="block_shape_1" type="CollisionShape" parent="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.26099, 0.306862, 0 )
+shape = SubResource( 4 )
+
+[node name="block_shape_2" type="CollisionShape" parent="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.256, 0.307, 0 )
+shape = SubResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/open = SubResource( 3 )
