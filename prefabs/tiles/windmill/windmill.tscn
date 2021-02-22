@@ -4,11 +4,10 @@
 [ext_resource path="res://prefabs/tiles/windmill/scripts/windmill.gd" type="Script" id=2]
 [ext_resource path="res://prefabs/physics/bodies/straight_walls_body.tscn" type="PackedScene" id=3]
 
-[sub_resource type="BoxShape" id=2]
+[sub_resource type="BoxShape" id=1]
 extents = Vector3( 1.04, 3.17, 0.33 )
 
-[sub_resource type="Animation" id=1]
-resource_name = "Rotate"
+[sub_resource type="Animation" id=2]
 length = 5.0
 loop = true
 tracks/0/type = "value"
@@ -46,22 +45,23 @@ transform = Transform( 0.730401, -0.683019, 0, 0.683019, 0.730401, 0, 0, 0, 1, 0
 
 [node name="BladesBody" type="StaticBody" parent="BladesBodyContainer" index="0"]
 transform = Transform( 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 0, 0, 0 )
+collision_layer = 64
 
 [node name="CollisionShape" type="CollisionShape" parent="BladesBodyContainer/BladesBody" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.56, 0.33 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="BladesBodyContainer/BladesBody" index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.56, 0.33 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="BladesBodyContainer/BladesBody" index="2"]
 transform = Transform( -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0, 1, 4.56, 0, 0.33 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="BladesBodyContainer/BladesBody" index="3"]
 transform = Transform( -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0, 1, -4.57, 0, 0.33 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="WindmillBody" type="StaticBody" parent="." index="2"]
 collision_layer = 8
@@ -84,4 +84,4 @@ transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
 transform = Transform( 0.730401, -0.683019, 0, 0.683019, 0.730401, 0, 0, 0, 1, 0, 0.8656, 0.39996 )
 
 [node name="BladesAnimation" type="AnimationPlayer" parent="." index="4"]
-anims/Rotate = SubResource( 1 )
+anims/Rotate = SubResource( 2 )

@@ -73,6 +73,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 6 )
 subdiv = 0
 extents = Vector3( 14, 13, 38 )
 data = SubResource( 2 )
-[connection signal="reset" from="Club" to="PowerBar" method="reset"]
 
 [editable path="Player"]
