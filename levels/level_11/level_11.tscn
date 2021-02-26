@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://levels/base/base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://prefabs/tiles/split_t.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://prefabs/tiles/hole_round.tscn" type="PackedScene" id=8]
 [ext_resource path="res://prefabs/tiles/moving_platform/moving_platform.tscn" type="PackedScene" id=9]
 [ext_resource path="res://prefabs/lights/cool_spot_light.tscn" type="PackedScene" id=10]
+[ext_resource path="res://levels/level_12/level_12.tscn" type="PackedScene" id=11]
 
 [sub_resource type="GIProbeData" id=1]
 bounds = AABB( -28, -14, -43, 56, 28, 86 )
@@ -65,6 +66,7 @@ level_number = 11
 one_star_shots = 5
 two_star_shots = 3
 three_star_shots = 2
+next_scene = ExtResource( 11 )
 
 [node name="Club" parent="." index="2"]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 12.478, -23 )
