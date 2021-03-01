@@ -32,7 +32,7 @@ propagation = 0.7
 level_number = 7
 one_star_shots = 7
 two_star_shots = 5
-three_star_shots = 3
+three_star_shots = 4
 next_scene = ExtResource( 13 )
 
 [node name="Club" parent="." index="2"]

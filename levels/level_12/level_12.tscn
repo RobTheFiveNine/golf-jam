@@ -87,174 +87,174 @@ subdiv = 0
 extents = Vector3( 108, 79, 117 )
 data = SubResource( 5 )
 
-[node name="DirectionalLight" parent="." index="16" instance=ExtResource( 12 )]
-transform = Transform( -0.961516, 0.233254, -0.145188, -0.0752158, 0.284779, 0.955638, 0.264252, 0.929782, -0.256275, 11, 15, -2 )
+[node name="Course" type="Spatial" parent="." index="16"]
 
-[node name="CoolSpotLight10" parent="." index="17" instance=ExtResource( 22 )]
-transform = Transform( 0.862075, 0.0826199, 0.5, -0.351306, -0.613664, 0.707107, 0.365253, -0.785233, -0.5, 47, 32, -22 )
+[node name="DirectionalLight" parent="Course" index="0" instance=ExtResource( 12 )]
+transform = Transform( -0.961516, 0.233253, -0.145188, -0.0752158, 0.284779, 0.955638, 0.264252, 0.929782, -0.256275, 11, 15, -2 )
+
+[node name="CoolSpotLight10" parent="Course" index="1" instance=ExtResource( 22 )]
+transform = Transform( 0.862076, 0.0826202, 0.5, -0.351306, -0.613664, 0.707107, 0.365253, -0.785233, -0.5, 47, 32, -22 )
 light_energy = 3.66
 spot_range = 103.0
 spot_angle = 40.586
 
-[node name="CoolSpotLight11" parent="." index="18" instance=ExtResource( 22 )]
-transform = Transform( 0.867852, -0.496822, 1.36818e-07, -8.9407e-08, 1.19209e-07, 1, -0.496822, -0.867852, 5.90367e-08, -10, 28, 36 )
+[node name="CoolSpotLight11" parent="Course" index="2" instance=ExtResource( 22 )]
+transform = Transform( 0.867852, -0.496822, 1.36818e-07, -8.9407e-08, 1.19209e-07, 1, -0.496822, -0.867852, 5.90365e-08, -10, 28, 36 )
 spot_range = 39.0
 spot_angle = 29.723
 
-[node name="CoolSpotLight12" parent="." index="19" instance=ExtResource( 22 )]
-transform = Transform( 0.867852, -0.496822, 1.36818e-07, -8.9407e-08, 1.19209e-07, 1, -0.496822, -0.867852, 5.90367e-08, 11, 28, 36 )
+[node name="CoolSpotLight12" parent="Course" index="3" instance=ExtResource( 22 )]
+transform = Transform( 0.867852, -0.496822, 1.36818e-07, -8.9407e-08, 1.19209e-07, 1, -0.496822, -0.867852, 5.90365e-08, 11, 28, 36 )
 spot_range = 39.0
 spot_angle = 29.723
 
-[node name="CoolSpotLight5" parent="." index="20" instance=ExtResource( 22 )]
-transform = Transform( 0.613664, -0.351306, 0.707107, -0.613664, 0.351307, 0.707107, -0.496822, -0.867852, 6.26549e-07, 50, 16, 67 )
+[node name="CoolSpotLight5" parent="Course" index="4" instance=ExtResource( 22 )]
+transform = Transform( 0.613664, -0.351306, 0.707107, -0.613664, 0.351307, 0.707107, -0.496822, -0.867852, 6.20736e-07, 50, 16, 67 )
 spot_range = 50.0
 spot_angle = 40.929
 
-[node name="CoolSpotLight6" parent="." index="21" instance=ExtResource( 22 )]
+[node name="CoolSpotLight6" parent="Course" index="5" instance=ExtResource( 22 )]
 transform = Transform( -0.120182, -0.713133, 0.69065, 0.289377, 0.640317, 0.711516, -0.949641, 0.28537, 0.12941, 59, 16, 47 )
 spot_range = 70.0
 spot_angle = 40.929
 
-[node name="CoolSpotLight9" parent="." index="22" instance=ExtResource( 22 )]
-transform = Transform( 0.838281, -0.479893, -0.258819, 0.224617, -0.128587, 0.965926, -0.496822, -0.867852, 3.12526e-07, 9, 32, 68 )
+[node name="CoolSpotLight9" parent="Course" index="6" instance=ExtResource( 22 )]
+transform = Transform( 0.838281, -0.479893, -0.258819, 0.224617, -0.128587, 0.965926, -0.496822, -0.867852, 8.62161e-08, 9, 32, 68 )
 spot_range = 51.0
 spot_angle = 40.929
 
-[node name="Course" type="Spatial" parent="." index="23"]
-
-[node name="obstacleBlock" parent="Course" index="0" instance=ExtResource( 21 )]
+[node name="obstacleBlock" parent="Course" index="7" instance=ExtResource( 21 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10, 0.4, 41 )
 
-[node name="hillSquare" parent="Course" index="1" instance=ExtResource( 20 )]
+[node name="hillSquare" parent="Course" index="8" instance=ExtResource( 20 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.4, 41 )
 
-[node name="squareCornerA2" parent="Course" index="2" instance=ExtResource( 5 )]
+[node name="squareCornerA2" parent="Course" index="9" instance=ExtResource( 5 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10, 0.4, 41 )
 
-[node name="tunnelDouble" parent="Course" index="3" instance=ExtResource( 19 )]
+[node name="tunnelDouble" parent="Course" index="10" instance=ExtResource( 19 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.4, 20.999 )
 
-[node name="rampC" parent="Course" index="4" instance=ExtResource( 18 )]
+[node name="rampC" parent="Course" index="11" instance=ExtResource( 18 )]
 
-[node name="rampC2" parent="Course" index="5" instance=ExtResource( 18 )]
+[node name="rampC2" parent="Course" index="12" instance=ExtResource( 18 )]
 transform = Transform( 1.33118e-07, 0, 1, 0, 1, 0, -1, 0, 1.33118e-07, 20, -4, 41 )
 
-[node name="obstacleDiamond" parent="Course" index="6" instance=ExtResource( 17 )]
+[node name="obstacleDiamond" parent="Course" index="13" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -4, 71 )
 
-[node name="Castle" parent="Course" index="7" instance=ExtResource( 16 )]
+[node name="Castle" parent="Course" index="14" instance=ExtResource( 16 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30, -4, 71 )
 
-[node name="StraightWalls2" parent="Course" index="8" instance=ExtResource( 2 )]
+[node name="StraightWalls2" parent="Course" index="15" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, -4, 61 )
 
-[node name="StraightWalls3" parent="Course" index="9" instance=ExtResource( 2 )]
+[node name="StraightWalls3" parent="Course" index="16" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -4, 51 )
 
-[node name="StraightWalls4" parent="Course" index="10" instance=ExtResource( 2 )]
+[node name="StraightWalls4" parent="Course" index="17" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -4, 41 )
 
-[node name="EndWalls" parent="Course" index="11" instance=ExtResource( 3 )]
+[node name="EndWalls" parent="Course" index="18" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, -19 )
 
-[node name="StraightWalls7" parent="Course" index="12" instance=ExtResource( 2 )]
+[node name="StraightWalls7" parent="Course" index="19" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.4, 30 )
 
-[node name="StraightWalls11" parent="Course" index="13" instance=ExtResource( 2 )]
+[node name="StraightWalls11" parent="Course" index="20" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.4, 31 )
 
-[node name="StraightWalls5" parent="Course" index="14" instance=ExtResource( 2 )]
+[node name="StraightWalls5" parent="Course" index="21" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -4, 31 )
 
-[node name="StraightWalls6" parent="Course" index="15" instance=ExtResource( 2 )]
+[node name="StraightWalls6" parent="Course" index="22" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -4, 21 )
 
-[node name="side2" parent="Course" index="16" instance=ExtResource( 14 )]
+[node name="side2" parent="Course" index="23" instance=ExtResource( 14 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 50, -4, 41 )
 
-[node name="side3" parent="Course" index="17" instance=ExtResource( 14 )]
+[node name="side3" parent="Course" index="24" instance=ExtResource( 14 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10, -4, 81 )
 
-[node name="side4" parent="Course" index="18" instance=ExtResource( 14 )]
+[node name="side4" parent="Course" index="25" instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 71 )
 
-[node name="roundCornerC" parent="Course" index="19" instance=ExtResource( 15 )]
+[node name="roundCornerC" parent="Course" index="26" instance=ExtResource( 15 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 50, -4, 31 )
 
-[node name="roundCornerC5" parent="Course" index="20" instance=ExtResource( 15 )]
+[node name="roundCornerC5" parent="Course" index="27" instance=ExtResource( 15 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 20, -4, 61 )
 
-[node name="roundCornerC6" parent="Course" index="21" instance=ExtResource( 15 )]
+[node name="roundCornerC6" parent="Course" index="28" instance=ExtResource( 15 )]
 transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 20, -4, 81 )
 
-[node name="roundCornerC7" parent="Course" index="22" instance=ExtResource( 15 )]
+[node name="roundCornerC7" parent="Course" index="29" instance=ExtResource( 15 )]
 transform = Transform( 1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 0, -4, 81 )
 
-[node name="roundCornerC8" parent="Course" index="23" instance=ExtResource( 15 )]
+[node name="roundCornerC8" parent="Course" index="30" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 0, -4, 61 )
 
-[node name="roundCornerC3" parent="Course" index="24" instance=ExtResource( 15 )]
+[node name="roundCornerC3" parent="Course" index="31" instance=ExtResource( 15 )]
 transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 50, -4, 51 )
 
-[node name="roundCornerC4" parent="Course" index="25" instance=ExtResource( 15 )]
+[node name="roundCornerC4" parent="Course" index="32" instance=ExtResource( 15 )]
 transform = Transform( 1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 30, -4, 51 )
 
-[node name="roundCornerC2" parent="Course" index="26" instance=ExtResource( 15 )]
+[node name="roundCornerC2" parent="Course" index="33" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30, -4, 31 )
 
-[node name="wallsToOpen" parent="Course" index="27" instance=ExtResource( 13 )]
+[node name="wallsToOpen" parent="Course" index="34" instance=ExtResource( 13 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 40, -4, 31 )
 
-[node name="wallsToOpen2" parent="Course" index="28" instance=ExtResource( 13 )]
+[node name="wallsToOpen2" parent="Course" index="35" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 40, -4, 51 )
 
-[node name="wallsToOpen3" parent="Course" index="29" instance=ExtResource( 13 )]
+[node name="wallsToOpen3" parent="Course" index="36" instance=ExtResource( 13 )]
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 30, -4, 41 )
 
-[node name="wallsToOpen4" parent="Course" index="30" instance=ExtResource( 13 )]
+[node name="wallsToOpen4" parent="Course" index="37" instance=ExtResource( 13 )]
 transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 20, -4, 71 )
 
-[node name="wallsToOpen5" parent="Course" index="31" instance=ExtResource( 13 )]
+[node name="wallsToOpen5" parent="Course" index="38" instance=ExtResource( 13 )]
 transform = Transform( -1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, 10, -4, 61 )
 
-[node name="squareCornerA" parent="Course" index="32" instance=ExtResource( 5 )]
+[node name="squareCornerA" parent="Course" index="39" instance=ExtResource( 5 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -4, 11 )
 
-[node name="Hole" parent="Course" index="33" instance=ExtResource( 11 )]
+[node name="Hole" parent="Course" index="40" instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, -4, 41 )
 
-[node name="windmill" parent="Course" index="34" instance=ExtResource( 10 )]
+[node name="windmill" parent="Course" index="41" instance=ExtResource( 10 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 40, -4, 21 )
 
-[node name="gap" parent="Course" index="35" instance=ExtResource( 8 )]
+[node name="gap" parent="Course" index="42" instance=ExtResource( 8 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30, -4, 11 )
 
-[node name="narrowSquare" parent="Course" index="36" instance=ExtResource( 9 )]
+[node name="narrowSquare" parent="Course" index="43" instance=ExtResource( 9 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20, -4, 11 )
 
-[node name="roundCornerA" parent="Course" index="37" instance=ExtResource( 6 )]
+[node name="roundCornerA" parent="Course" index="44" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -4, 1 )
 
-[node name="roundCornerA2" parent="Course" index="38" instance=ExtResource( 6 )]
+[node name="roundCornerA2" parent="Course" index="45" instance=ExtResource( 6 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 40, -4, 11 )
 
-[node name="roundCornerA3" parent="Course" index="39" instance=ExtResource( 6 )]
+[node name="roundCornerA3" parent="Course" index="46" instance=ExtResource( 6 )]
 transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 40, -4, 71 )
 
-[node name="splitT" parent="Course" index="40" instance=ExtResource( 7 )]
+[node name="splitT" parent="Course" index="47" instance=ExtResource( 7 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, -4, 1 )
 
-[node name="splitT2" parent="Course" index="41" instance=ExtResource( 7 )]
+[node name="splitT2" parent="Course" index="48" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -4, 11 )
 
-[node name="StraightWalls" parent="Course" index="42" instance=ExtResource( 2 )]
+[node name="StraightWalls" parent="Course" index="49" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, -12 )
 
-[node name="hillRound" parent="Course" index="43" instance=ExtResource( 4 )]
+[node name="hillRound" parent="Course" index="50" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, -9 )
 
-[node name="Floor" type="StaticBody" parent="Course" index="44"]
+[node name="Floor" type="StaticBody" parent="Course" index="51"]
 
 [node name="CollisionPolygon" type="CollisionPolygon" parent="Course/Floor" index="0"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, -3.67554, 0 )
