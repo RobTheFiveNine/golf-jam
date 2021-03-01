@@ -7,6 +7,9 @@ func _ready():
     Global.total_stars = 0
     $TransitionOverlay.color = Color(0, 0, 0, 256)
     animation.play_backwards("FadeOut")
+    $AnimationTree.active = true
+    var state_machine = $AnimationTree.get("parameters/playback")
+    state_machine.start("hill")
 
 func _on_StartButton_pressed():
     animation.play("FadeOut")
