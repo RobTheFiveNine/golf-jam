@@ -51,8 +51,10 @@ _global_script_class_icons={
 [application]
 
 config/name="Golf Jam"
-run/main_scene="res://title/title.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://credits/credits.tscn"
+config/icon="res://golf_jam.png"
+config/windows_native_icon="res://golf_jam.ico"
+
 [audio]
 
 output_latency.web=0
@@ -65,6 +67,7 @@ Global="*res://scripts/global.gd"
 
 window/size/width=1920
 window/size/height=1080
+window/size/fullscreen=true
 window/size/test_width=1280
 window/size/test_height=720
 
