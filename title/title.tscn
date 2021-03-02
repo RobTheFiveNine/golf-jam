@@ -61,7 +61,7 @@ bias = 1.5
 normal_bias = 0.0
 propagation = 0.7
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=5]
 resource_name = "castle"
 length = 3.0
 tracks/0/type = "value"
@@ -89,7 +89,7 @@ tracks/1/keys = {
 "values": [ Vector3( -5.84794, 51.8479, 0 ), Vector3( -5.848, 45.887, 0 ) ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=6]
 resource_name = "diamond"
 length = 3.0
 tracks/0/type = "value"
@@ -117,8 +117,7 @@ tracks/1/keys = {
 "values": [ Vector3( -45.0479, -46.9519, 0 ), Vector3( -35.061, -55.331, 0 ) ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "hill"
+[sub_resource type="Animation" id=7]
 length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Camera:translation")
@@ -145,7 +144,7 @@ tracks/1/keys = {
 "values": [ Vector3( -36.6479, 138.648, 0 ), Vector3( -9.56, 140.572, 0.354 ) ]
 }
 
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id=8]
 resource_name = "hole"
 length = 3.0
 tracks/0/type = "value"
@@ -173,8 +172,7 @@ tracks/1/keys = {
 "values": [ Vector3( -33.0479, 40.2483, 0 ), Vector3( -41.4479, 135.049, 0 ) ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "tunnel"
+[sub_resource type="Animation" id=9]
 length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Camera:translation")
@@ -201,7 +199,7 @@ tracks/1/keys = {
 "values": [ Vector3( -58.6479, -98.1516, 0 ), Vector3( -58.6479, -83.1516, 0 ) ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=10]
 resource_name = "under_bridge"
 length = 2.0
 tracks/0/type = "value"
@@ -229,7 +227,7 @@ tracks/1/keys = {
 "values": [ Vector3( -17.448, 179.448, 0 ) ]
 }
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=11]
 resource_name = "windmill"
 length = 3.0
 tracks/0/type = "value"
@@ -257,32 +255,44 @@ tracks/1/keys = {
 "values": [ Vector3( -45.4479, -149.351, 0 ), Vector3( -20.597, -216.833, 0 ) ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=26]
+[sub_resource type="AnimationNodeAnimation" id=12]
 animation = "castle"
 
-[sub_resource type="AnimationNodeAnimation" id=15]
+[sub_resource type="AnimationNodeAnimation" id=13]
 animation = "diamond"
 
-[sub_resource type="AnimationNodeAnimation" id=7]
+[sub_resource type="AnimationNodeAnimation" id=14]
 animation = "hill"
 
-[sub_resource type="AnimationNodeAnimation" id=27]
+[sub_resource type="AnimationNodeAnimation" id=15]
 animation = "hole"
 
-[sub_resource type="AnimationNodeAnimation" id=8]
+[sub_resource type="AnimationNodeAnimation" id=16]
 animation = "tunnel"
 
-[sub_resource type="AnimationNodeAnimation" id=16]
+[sub_resource type="AnimationNodeAnimation" id=17]
 animation = "under_bridge"
 
-[sub_resource type="AnimationNodeAnimation" id=23]
+[sub_resource type="AnimationNodeAnimation" id=18]
 animation = "windmill"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=17]
+[sub_resource type="AnimationNodeStateMachineTransition" id=19]
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=18]
+[sub_resource type="AnimationNodeStateMachineTransition" id=20]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=23]
 switch_mode = 2
 auto_advance = true
 
@@ -294,36 +304,24 @@ auto_advance = true
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=28]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=29]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=30]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachine" id=11]
-states/castle/node = SubResource( 26 )
+[sub_resource type="AnimationNodeStateMachine" id=26]
+states/castle/node = SubResource( 12 )
 states/castle/position = Vector2( 931, 254 )
-states/diamond/node = SubResource( 15 )
+states/diamond/node = SubResource( 13 )
 states/diamond/position = Vector2( 931, 151 )
-states/hill/node = SubResource( 7 )
+states/hill/node = SubResource( 14 )
 states/hill/position = Vector2( 290, 254 )
-states/hole/node = SubResource( 27 )
+states/hole/node = SubResource( 15 )
 states/hole/position = Vector2( 489, 254 )
-states/tunnel/node = SubResource( 8 )
+states/tunnel/node = SubResource( 16 )
 states/tunnel/position = Vector2( 489, 145 )
-states/under_bridge/node = SubResource( 16 )
+states/under_bridge/node = SubResource( 17 )
 states/under_bridge/position = Vector2( 707, 145 )
-states/windmill/node = SubResource( 23 )
+states/windmill/node = SubResource( 18 )
 states/windmill/position = Vector2( 295, 145 )
-transitions = [ "tunnel", "under_bridge", SubResource( 17 ), "under_bridge", "diamond", SubResource( 18 ), "hill", "windmill", SubResource( 24 ), "windmill", "tunnel", SubResource( 25 ), "hole", "hill", SubResource( 28 ), "diamond", "castle", SubResource( 29 ), "castle", "hole", SubResource( 30 ) ]
+transitions = [ "tunnel", "under_bridge", SubResource( 19 ), "under_bridge", "diamond", SubResource( 20 ), "hill", "windmill", SubResource( 21 ), "windmill", "tunnel", SubResource( 22 ), "hole", "hill", SubResource( 23 ), "diamond", "castle", SubResource( 24 ), "castle", "hole", SubResource( 25 ) ]
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=12]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=27]
 
 [node name="Title" type="Spatial"]
 script = ExtResource( 3 )
@@ -581,16 +579,16 @@ current = true
 environment = ExtResource( 26 )
 
 [node name="BackgroundAnimation" type="AnimationPlayer" parent="."]
-anims/castle = SubResource( 20 )
-anims/diamond = SubResource( 13 )
-anims/hill = SubResource( 5 )
-anims/hole = SubResource( 21 )
-anims/tunnel = SubResource( 6 )
-anims/under_bridge = SubResource( 14 )
-anims/windmill = SubResource( 22 )
+anims/castle = SubResource( 5 )
+anims/diamond = SubResource( 6 )
+anims/hill = SubResource( 7 )
+anims/hole = SubResource( 8 )
+anims/tunnel = SubResource( 9 )
+anims/under_bridge = SubResource( 10 )
+anims/windmill = SubResource( 11 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 11 )
+tree_root = SubResource( 26 )
 anim_player = NodePath("../BackgroundAnimation")
-parameters/playback = SubResource( 12 )
+parameters/playback = SubResource( 27 )
 [connection signal="pressed" from="CenterContainer2/StartButton" to="." method="_on_StartButton_pressed"]
