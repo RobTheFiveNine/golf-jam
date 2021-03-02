@@ -93,7 +93,10 @@ func _on_input_mode_changed(mode):
 
 func _on_HitTween_tween_completed(object, key):
     if mesh.rotation_degrees.z == 0:
-        animation_player.play("Hit")
+        if OS.get_name() == "HTML5":
+            hit_ball()
+        else:
+            animation_player.play("Hit")
 
 func swing(power_value):
     swinging = true
