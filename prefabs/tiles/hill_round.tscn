@@ -7,13 +7,23 @@
 
 [node name="StraightWallsBody" parent="." index="0" instance=ExtResource( 2 )]
 
-[node name="StaticBody" type="StaticBody" parent="." index="1"]
+[node name="HillWalls" type="StaticBody" parent="." index="1"]
+
+[node name="CollisionPolygon" type="CollisionPolygon" parent="HillWalls" index="0"]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -4.5, 9.065, 0 )
+polygon = PoolVector2Array( 2.05198, -7.20098, 1.39061, -6.96098, 0.701203, -6.81374, 0.000473219, -6.76583, -0.701637, -6.81456, -1.39005, -6.96097, -2.05126, -7.20121, -2.6732, -7.53048, -2.76687, -7.5991, 2.76707, -7.59901, 2.67336, -7.53084 )
+
+[node name="CollisionPolygon2" type="CollisionPolygon" parent="HillWalls" index="1"]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 4.5, 9.065, 0 )
+polygon = PoolVector2Array( 2.05198, -7.20098, 1.39061, -6.96098, 0.701203, -6.81374, 0.000473219, -6.76583, -0.701637, -6.81456, -1.39005, -6.96097, -2.05126, -7.20121, -2.6732, -7.53048, -2.76687, -7.5991, 2.76707, -7.59901, 2.67336, -7.53084 )
+
+[node name="HillBody" type="StaticBody" parent="." index="2"]
 collision_layer = 64
 
-[node name="CollisionPolygon" type="CollisionPolygon" parent="StaticBody" index="0"]
+[node name="CollisionPolygon" type="CollisionPolygon" parent="HillBody" index="0"]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 0, 0 )
 depth = 8.084
 polygon = PoolVector2Array( 2.47299, 0.719876, 2.12552, 0.899639, 1.73261, 1.08901, 1.31821, 1.25249, 0.885505, 1.3712, 0.446266, 1.4415, -0.000150354, 1.4662, -0.444848, 1.4418, -0.885036, 1.37077, -1.31672, 1.25339, -1.73297, 1.0886, -2.1288, 0.881208, -2.46208, 0.741601, -2.87208, 0.636303, 2.94996, 0.644118 )
 
-[node name="tmpParent" parent="." index="2"]
+[node name="tmpParent" parent="." index="3"]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
