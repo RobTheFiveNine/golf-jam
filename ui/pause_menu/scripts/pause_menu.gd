@@ -39,15 +39,17 @@ func close_menu():
     resume_button.disabled = true
     exit_button.disabled = true
     restart_button.disabled = true
-    
 
 func _on_ResumeButton_pressed():
     if is_open:
         close_menu()
 
-func _on_ExitButton_pressed():
+func _on_ExitButton_pressed():        
     if is_open:
-        get_tree().quit()
+        if OS.get_name() == "HTML5":
+            get_tree().change_scene("res://title/title.tscn")
+        else:
+            get_tree().quit()
 
 func _on_RestartLevel_pressed():
     if is_open:

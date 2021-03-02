@@ -53,9 +53,6 @@ func handle_movement(delta):
     transform.origin += velocity
 
 func _process(delta):
-    if Input.is_action_just_pressed("ui_end"):
-        get_tree().quit()
-
     if Input.is_action_just_pressed("toggle_input_mode"):
         if input_mode == INPUT_MODE_FREE_VIEW:
             input_mode = INPUT_MODE_AIM
