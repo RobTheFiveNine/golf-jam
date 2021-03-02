@@ -53,6 +53,9 @@ _global_script_class_icons={
 config/name="Golf Jam"
 run/main_scene="res://title/title.tscn"
 config/icon="res://icon.png"
+[audio]
+
+output_latency.web=0
 
 [autoload]
 
