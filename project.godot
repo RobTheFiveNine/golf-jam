@@ -51,7 +51,9 @@ _global_script_class_icons={
 [application]
 
 config/name="Golf Jam"
-run/main_scene="res://credits/credits.tscn"
+run/main_scene="res://splash/splash_screen.tscn"
+boot_splash/image="res://splash/sprites/blank.png"
+boot_splash/bg_color=Color( 0.0823529, 0.0823529, 0.0823529, 1 )
 config/icon="res://golf_jam.png"
 config/windows_native_icon="res://golf_jam.ico"
 
