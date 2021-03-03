@@ -1,7 +1,7 @@
 extends Spatial
 
 onready var stars_label : Label = $CenterContainer/VBoxContainer/StarsLabel
-onready var animation : AnimationPlayer = $AnimationPlayer
+onready var animation : AnimationPlayer = $Transition
 
 func _ready():
     $TransitionOverlay.color = Color(0, 0, 0, 256)
