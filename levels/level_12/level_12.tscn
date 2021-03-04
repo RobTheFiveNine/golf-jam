@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://levels/base/base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://prefabs/tiles/straight_walls.tscn" type="PackedScene" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://prefabs/tiles/hill_square.tscn" type="PackedScene" id=20]
 [ext_resource path="res://prefabs/tiles/obstacle_block.tscn" type="PackedScene" id=21]
 [ext_resource path="res://prefabs/lights/cool_spot_light.tscn" type="PackedScene" id=22]
+[ext_resource path="res://levels/level_13/level_13.tscn" type="PackedScene" id=23]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.261505, 36.7279, 99 )
@@ -50,6 +51,7 @@ level_number = 12
 one_star_shots = 7
 two_star_shots = 5
 three_star_shots = 3
+next_scene = ExtResource( 23 )
 
 [node name="Player" parent="." index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.883, 19.324, -21.813 )
