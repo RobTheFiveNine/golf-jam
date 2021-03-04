@@ -6,12 +6,11 @@
 [ext_resource path="res://fonts/kenney_pixel.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://splash/scripts/splash_screen.gd" type="Script" id=5]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=1]
 size = 75
 font_data = ExtResource( 4 )
 
-[sub_resource type="Animation" id=1]
-resource_name = "Credits"
+[sub_resource type="Animation" id=2]
 length = 5.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("GodotLogoContainer:modulate")
@@ -62,7 +61,7 @@ tracks/3/keys = {
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
 }
 
-[sub_resource type="ShaderMaterial" id=2]
+[sub_resource type="ShaderMaterial" id=3]
 shader = ExtResource( 2 )
 shader_param/blur_amount = 0.0
 
@@ -126,16 +125,16 @@ __meta__ = {
 margin_top = 305.0
 margin_right = 546.0
 margin_bottom = 362.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.254902, 0.25098, 0.258824, 1 )
 text = "ROBTHEFIVENINE.ITCH.IO"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Credits"
-anims/Credits = SubResource( 1 )
+anims/Credits = SubResource( 2 )
 
 [node name="Blur" type="ColorRect" parent="."]
-material = SubResource( 2 )
+material = SubResource( 3 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.027451, 0.027451, 0.027451, 1 )
