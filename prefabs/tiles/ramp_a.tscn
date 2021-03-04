@@ -4,21 +4,23 @@
 
 [node name="rampA" instance=ExtResource( 1 )]
 
-[node name="StaticBody" type="StaticBody" parent="." index="0"]
-collision_layer = 64
+[node name="Walls" type="StaticBody" parent="." index="0"]
 
-[node name="CollisionPolygon" type="CollisionPolygon" parent="StaticBody" index="0"]
+[node name="CollisionPolygon" type="CollisionPolygon" parent="Walls" index="0"]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -4.49569, 0, 0 )
 polygon = PoolVector2Array( -4.99975, -0.000694364, -4.99927, 1.46591, 4.99957, 2.93303, 4.99905, 1.46659 )
 
-[node name="CollisionPolygon2" type="CollisionPolygon" parent="StaticBody" index="1"]
+[node name="CollisionPolygon2" type="CollisionPolygon" parent="Walls" index="1"]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 4.49449, 0, 0 )
 polygon = PoolVector2Array( -4.99975, -0.000694364, -4.99927, 1.46591, 4.99957, 2.93303, 4.99905, 1.46659 )
 
-[node name="CollisionPolygon3" type="CollisionPolygon" parent="StaticBody" index="2"]
+[node name="StaticBody" type="StaticBody" parent="." index="1"]
+collision_layer = 64
+
+[node name="CollisionPolygon3" type="CollisionPolygon" parent="StaticBody" index="0"]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.00661874, 0, 0 )
 depth = 8.107
-polygon = PoolVector2Array( -4.99975, -0.000694364, -4.99954, 0.632342, -4.383, 0.699856, -3.95959, 0.767257, 5.00506, 2.09923, 4.99905, 1.46659 )
+polygon = PoolVector2Array( -4.99975, -0.000694364, -5.01845, 0.624411, -4.48971, 0.675995, -3.72884, 0.781743, -2.79963, 0.934855, 5.00506, 2.09923, 4.99905, 1.46659 )
 
-[node name="tmpParent" parent="." index="1"]
+[node name="tmpParent" parent="." index="2"]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
