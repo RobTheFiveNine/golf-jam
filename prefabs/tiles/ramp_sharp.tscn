@@ -14,7 +14,7 @@ collision_mask = 0
 [node name="CollisionPolygon" type="CollisionPolygon" parent="StaticBody" index="0"]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.243243, 0, 0 )
 depth = 8.776
-polygon = PoolVector2Array( -2.49739, 0.625988, 4.99218, 0.567223, 5.0129, 0.60029, 4.70666, 0.657246, 4.42997, 0.693201, -2.4997, 1.46647 )
+polygon = PoolVector2Array( -2.49739, 0.625988, 2.53813, 0.600918, 2.56576, 0.623672, 2.23582, 0.665931, 1.73196, 0.745573, -2.5, 1.46472 )
 
 [node name="tmpParent" parent="." index="2"]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )

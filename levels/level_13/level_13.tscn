@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://levels/base/base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://prefabs/tiles/ramp_d.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://prefabs/tiles/ramp_a.tscn" type="PackedScene" id=6]
 [ext_resource path="res://prefabs/tiles/end_walls.tscn" type="PackedScene" id=7]
 [ext_resource path="res://prefabs/lights/cool_spot_light.tscn" type="PackedScene" id=8]
+[ext_resource path="res://levels/level_14/level_14.tscn" type="PackedScene" id=9]
 
 [sub_resource type="GIProbeData" id=1]
 bounds = AABB( -47.7764, -32.8418, -43.9315, 95.5529, 65.6836, 87.863 )
@@ -27,6 +28,7 @@ level_number = 13
 one_star_shots = 6
 two_star_shots = 4
 three_star_shots = 3
+next_scene = ExtResource( 9 )
 
 [node name="Player" parent="." index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.843, 48.816, -36.648 )
