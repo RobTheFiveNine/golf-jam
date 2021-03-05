@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://levels/base/base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://prefabs/tiles/end_walls.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://prefabs/tiles/split_start.tscn" type="PackedScene" id=10]
 [ext_resource path="res://prefabs/tiles/block.tscn" type="PackedScene" id=11]
 [ext_resource path="res://prefabs/lights/cool_spot_light.tscn" type="PackedScene" id=12]
+[ext_resource path="res://levels/level_15/level_15.tscn" type="PackedScene" id=13]
 
 [sub_resource type="GIProbeData" id=1]
 bounds = AABB( -28, -30, -37, 56, 60, 74 )
@@ -86,6 +87,7 @@ level_number = 14
 one_star_shots = 3
 two_star_shots = 2
 three_star_shots = 1
+next_scene = ExtResource( 13 )
 
 [node name="Camera_Container" parent="Player" index="0"]
 transform = Transform( -0.527312, 0, -0.849672, 0, 1, 0, 0.849672, 0, -0.527312, -0.734, 10.722, -2.331 )
