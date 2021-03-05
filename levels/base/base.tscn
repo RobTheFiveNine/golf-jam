@@ -121,13 +121,15 @@ shape = SubResource( 4 )
 [node name="CollisionShape4" type="CollisionShape" parent="Bounds"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.55566, 17.0896, -59.4906 )
 shape = SubResource( 4 )
-[connection signal="input_mode_changed" from="Player" to="." method="_on_Player_input_mode_changed"]
 [connection signal="input_mode_changed" from="Player" to="InputMode" method="_on_Player_input_mode_changed"]
+[connection signal="input_mode_changed" from="Player" to="." method="_on_Player_input_mode_changed"]
 [connection signal="ball_hit" from="Club" to="." method="_on_Club_ball_hit"]
 [connection signal="ball_hit" from="Club" to="ShotCounter" method="increment"]
 [connection signal="reset" from="Club" to="PowerBar" method="reset"]
 [connection signal="reset" from="Club" to="StarRequirements" method="_on_club_reset"]
 [connection signal="ball_stopped" from="Ball" to="Club" method="_on_ball_stopped"]
+[connection signal="ball_ungrounded" from="Ball" to="Club" method="_on_ball_ungrounded"]
+[connection signal="ball_ungrounded" from="Ball" to="PowerBar" method="disable"]
 [connection signal="power_set" from="PowerBar" to="Club" method="swing"]
 [connection signal="level_changed" from="ZoomLevel" to="Player" method="_on_ZoomLevel_level_changed"]
 [connection signal="shot_taken" from="ShotCounter" to="StarRequirements" method="_on_shot_taken"]

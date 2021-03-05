@@ -1,6 +1,7 @@
 extends Spatial
 
 signal ball_stopped
+signal ball_ungrounded
 
 export (NodePath) var out_of_bounds_path
 
@@ -20,6 +21,10 @@ func _physics_process(delta):
     
     if not on_floor_last_frame and on_floor:
         bounce_sound.play()
+        
+    if on_floor_last_frame and not on_floor:
+        rigidbody.sleeping = false
+        emit_signal("ball_ungrounded")
         
     on_floor_last_frame = on_floor
     current_floor = raycast.get_collider()

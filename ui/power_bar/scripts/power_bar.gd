@@ -35,6 +35,9 @@ func fade_in():
 func fade_out():
     tween.interpolate_property(self, "modulate", null, Color("00ffffff"), 1.1, Tween.TRANS_LINEAR)
     tween.start()
+    
+func disable():
+    is_set = true
 
 func reset():
     is_set = false

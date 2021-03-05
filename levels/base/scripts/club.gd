@@ -82,6 +82,10 @@ func _on_ball_stopped():
         swinging = false
         reset_position()
     
+func _on_ball_ungrounded():
+    if not ball_in_hole:
+        swinging = true
+    
 func _on_ball_entered_hole():
     ball_in_hole = true
     
@@ -127,6 +131,3 @@ func swing(power_value):
     )
 
     tween.start()
-    
-    
-    
