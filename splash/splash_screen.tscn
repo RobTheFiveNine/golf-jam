@@ -11,7 +11,7 @@ size = 75
 font_data = ExtResource( 4 )
 
 [sub_resource type="Animation" id=2]
-length = 5.3
+length = 7.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("GodotLogoContainer:modulate")
 tracks/0/interp = 1
@@ -19,7 +19,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.7, 2, 2.6 ),
+"times": PoolRealArray( 0, 1, 2.5, 3.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
@@ -31,7 +31,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5, 2, 2.6, 3.1, 4.6, 5.1 ),
+"times": PoolRealArray( 0, 0.8, 2.5, 3.5, 4.5, 6.3, 7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 2.5, 0.0, 0.0, 2.0, 0.0, 0.0, 4.0 ]
@@ -43,7 +43,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 2.6, 3.2 ),
+"times": PoolRealArray( 0, 3.5, 4.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
@@ -55,7 +55,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 4.7, 5.3 ),
+"times": PoolRealArray( 0, 6.4, 7 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
@@ -63,7 +63,7 @@ tracks/3/keys = {
 
 [sub_resource type="ShaderMaterial" id=3]
 shader = ExtResource( 2 )
-shader_param/blur_amount = 0.0
+shader_param/blur_amount = 4.0
 
 [node name="SplashScreen" type="Control"]
 anchor_right = 1.0
@@ -145,7 +145,7 @@ __meta__ = {
 [node name="TransitionOverlay" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0, 0, 0, 0 )
+color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
