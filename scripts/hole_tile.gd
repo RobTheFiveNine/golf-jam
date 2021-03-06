@@ -35,4 +35,4 @@ func _on_HoleDropArea_body_entered(body):
     body.collision_mask = 8
 
 func _on_HoleDropArea_body_exited(body):
-    body.collision_mask = 9
+    body.collision_mask = 73
